@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace DbToJSON.Repositories
 {
-    class JsonDbContext 
+    public class JsonDbContext 
     {
     }
 }
