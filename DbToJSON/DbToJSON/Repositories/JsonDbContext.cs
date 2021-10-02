@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DbToJSON.Repositories
 {
-    public class JsonDbContext 
+    public class JsonDbContext : DbContext
     {
     }
 }
