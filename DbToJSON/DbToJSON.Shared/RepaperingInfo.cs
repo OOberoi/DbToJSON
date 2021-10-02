@@ -9,5 +9,7 @@ namespace DbToJSON.Shared
         public string ClientId { get; set; }
         public string PackageInstanceId { get; set; }
         public string Comments { get; set; }
+        public string JSON { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }
