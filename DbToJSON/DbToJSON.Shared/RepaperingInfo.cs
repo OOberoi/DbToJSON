@@ -8,5 +8,6 @@ namespace DbToJSON.Shared
         public string PackageId { get; set; }
         public string ClientId { get; set; }
         public string PackageInstanceId { get; set; }
+        public string Comments { get; set; }
     }
 }
