@@ -11,5 +11,7 @@ namespace DbToJSON.Shared
         public string Comments { get; set; }
         public string JSON { get; set; }
         public DateTime DateCreated { get; set; }
+        public DateTime DateUpdated { get; set; }
+
     }
 }
