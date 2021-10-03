@@ -5,6 +5,7 @@ namespace DbToJSON.Repositories
 {
     public class JsonDbContext : DbContext
     {
-        //public DbSet<>
+        public DbSet<RepaperingInfo> RepaperingInfo { get; set; }
+
     }
 }
