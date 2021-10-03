@@ -9,7 +9,11 @@ namespace DbToJSON.Repositories
 
         public JsonDbContext(DbContextOptions<JsonDbContext> options) : base(options)
         {
+        }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder); 
         }
     }
 }
