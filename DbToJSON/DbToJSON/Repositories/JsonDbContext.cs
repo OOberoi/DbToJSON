@@ -7,5 +7,9 @@ namespace DbToJSON.Repositories
     {
         public DbSet<RepaperingInfo> RepaperingInfo { get; set; }
 
+        public JsonDbContext(DbContextOptions<JsonDbContext> options) : base(options)
+        {
+
+        }
     }
 }
