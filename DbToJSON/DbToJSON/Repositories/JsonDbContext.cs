@@ -13,7 +13,8 @@ namespace DbToJSON.Repositories
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder); 
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<RepaperingInfo>(entity => entity.HasKey(e => e.ID));
         }
     }
 }
