@@ -20,8 +20,9 @@ namespace DbToJSON
         }
 
         public void ConfigursServices(IServiceCollection services)
-        { 
-        
+        {
+            services.AddDbContext<JsonDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
     }
