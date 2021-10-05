@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using DbToJSON.Repositories;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DbToJSON
 {
@@ -16,6 +17,11 @@ namespace DbToJSON
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+        }
+
+        public void ConfigursServices(IServiceCollection services)
+        { 
+        
         }
 
     }
