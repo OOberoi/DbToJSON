@@ -9,8 +9,14 @@ using Microsoft.Extensions.Configuration;
 
 namespace DbToJSON
 {
-    public class Startup
+    
+    public class Startup 
     {
+        public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
 
     }
 }
