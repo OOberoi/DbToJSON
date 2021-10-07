@@ -14,20 +14,4 @@
     <ProjectReference Include="..\DbToJSON.Shared\DbToJSON.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="appSettings.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>appsettings.json</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="appsettings.json">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>appSettings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-
 </Project>

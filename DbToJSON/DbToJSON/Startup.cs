@@ -22,7 +22,7 @@ namespace DbToJSON
         public void ConfigursServices(IServiceCollection services)
         {
             services.AddDbContext<JsonDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer("server=DESKTOP-9AB4882; Database=DbToJSON; trusted_connection=true;"));
         }
 
     }
