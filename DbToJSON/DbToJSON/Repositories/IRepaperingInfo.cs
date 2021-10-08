@@ -8,6 +8,6 @@ namespace DbToJSON.Repositories
 {
     interface IRepaperingInfo
     {
-
+        public string GetJSON();
     }
 }
