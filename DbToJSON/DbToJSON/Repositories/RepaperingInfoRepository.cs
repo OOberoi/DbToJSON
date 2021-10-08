@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Repositories
 {
-    interface IRepaperingInfo
+    class RepaperingInfoRepository
     {
-        string GetJSON();
     }
 }
