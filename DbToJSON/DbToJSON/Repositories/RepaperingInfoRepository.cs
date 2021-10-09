@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DbToJSON.Repositories
 {
     class RepaperingInfoRepository : IRepaperingInfo
     {
         string IRepaperingInfo.GetJSON()
         {
+
             throw new NotImplementedException();
         }
     }
