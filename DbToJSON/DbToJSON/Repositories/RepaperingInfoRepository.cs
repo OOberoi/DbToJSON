@@ -11,8 +11,9 @@ namespace DbToJSON.Repositories
     {
         string IRepaperingInfo.GetJSON()
         {
-            //get the payload
-            
+            // get the payload
+            // read the payload and format it to well formed JSON string
+            // 
             throw new NotImplementedException();
         }
     }
