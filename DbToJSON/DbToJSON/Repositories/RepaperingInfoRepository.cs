@@ -9,6 +9,7 @@ namespace DbToJSON.Repositories
 {
     class RepaperingInfoRepository : IRepaperingInfo
     {
+        private readonly JsonDbContext _jsonDbContext;
         string IRepaperingInfo.GetJSON()
         {
             // get the payload
