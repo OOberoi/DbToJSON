@@ -13,7 +13,7 @@ namespace DbToJSON.Repositories
         {
             // get the payload
             // read the payload and format it to well formed JSON string
-            // 
+            // Send it as an email to a recipient
             throw new NotImplementedException();
         }
     }
