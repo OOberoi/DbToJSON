@@ -9,5 +9,7 @@ namespace DbToJSON.Repositories
     interface IRepaperingInfo
     {
         string GetJSON();
+        string GetJSON(string[] instanceArr);
+        IList<string> GetJSONList(string[] instanceArr);
     }
 }
