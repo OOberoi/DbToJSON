@@ -14,11 +14,16 @@ namespace DbToJSON.Repositories
             _jsonDbContext = jsonDbContext;
         }
         private readonly JsonDbContext _jsonDbContext;
-        string IRepaperingInfo.GetJSON()
+        string IRepaperingInfo.GetJSON(string[] instId)
         {
             // get the payload
             // read the payload and format it to well formed JSON string
             // Send it as an email to a recipient
+            throw new NotImplementedException();
+        }
+
+        public string GetJSON()
+        {
             throw new NotImplementedException();
         }
     }
