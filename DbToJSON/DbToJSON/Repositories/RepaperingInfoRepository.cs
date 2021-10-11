@@ -14,7 +14,7 @@ namespace DbToJSON.Repositories
             _jsonDbContext = jsonDbContext;
         }
         private readonly JsonDbContext _jsonDbContext;
-        string IRepaperingInfo.GetJSON(string[] instId)
+        string IRepaperingInfo.GetJSON(string[] instanceArr)
         {
             // get the payload
             // read the payload and format it to well formed JSON string
