@@ -16,5 +16,10 @@ namespace UnitTests
         public void GetArrayList()
         { 
         }
+
+        [TestMethod]
+        public void GetWriteToFile()
+        { 
+        }
     }
 }
