@@ -3,11 +3,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class DbToJSONUnitTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AddTest()
         {
+            int val = 10;
+            Assert.IsTrue(val > 5);
         }
     }
 }
