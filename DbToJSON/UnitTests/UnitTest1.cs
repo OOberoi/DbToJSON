@@ -11,5 +11,10 @@ namespace UnitTests
             int val = 10;
             Assert.IsTrue(val > 5);
         }
+
+        [TestMethod]
+        public void GetArrayList()
+        { 
+        }
     }
 }
