@@ -1,11 +1,15 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DbToJSON.Repositories;
+using DbToJSON.Shared;
+using System.Collections.Generic;
 
 namespace UnitTests
 {
     [TestClass]
     public class DbToJSONUnitTests
     {
+        private IEnumerable<RepaperingInfo> RepaperingInfo { get; set; }
+
         [TestMethod]
         public void AddTest()
         {
@@ -23,8 +27,10 @@ namespace UnitTests
 
         [TestMethod]
         public void GetRepaperingInfo()
-        { 
-            //using var context = new Json
+        {
+            //using var ctx = new JsonDbContext();
+
+
         }
 
         [TestMethod]
