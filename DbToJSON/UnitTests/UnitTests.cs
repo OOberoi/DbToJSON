@@ -13,6 +13,11 @@ namespace UnitTests
     {
         private IEnumerable<RepaperingInfo> RepaperingInfo { get; set; }
 
+        public DbToJSONUnitTests()
+        {
+
+        }
+
         [TestMethod]
         public void AddTest()
         {
