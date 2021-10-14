@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DbToJSON.Repositories;
 using DbToJSON.Shared;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace UnitTests
 {
@@ -28,7 +29,7 @@ namespace UnitTests
         [TestMethod]
         public void GetRepaperingInfo()
         {
-            //using var ctx = new JsonDbContext();
+            using var ctx = new JsonDbContext();
 
 
         }
