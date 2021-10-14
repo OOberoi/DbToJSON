@@ -37,9 +37,11 @@ namespace UnitTests
         [TestMethod]
         public void GetRepaperingInfo()
         {
-            using var ctx = new JsonDbContext();
-
-
+            var retVal = _jsonDbContext.RepaperingInfo.ToList();
+            if (retVal.Count > 0)
+            {
+                Assert.IsTrue(true);
+            }
         }
 
         [TestMethod]
