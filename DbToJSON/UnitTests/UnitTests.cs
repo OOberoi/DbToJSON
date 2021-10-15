@@ -5,6 +5,7 @@ using System.Linq;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using System;
 
 namespace UnitTests
 {
@@ -37,10 +38,19 @@ namespace UnitTests
         [TestMethod]
         public void GetRepaperingInfo()
         {
-            var retVal = _jsonDbContext.RepaperingInfo.ToList();
-            if (retVal.Count > 0)
+            try
             {
-                Assert.IsTrue(true);
+                var retVal = _jsonDbContext.RepaperingInfo.ToList();
+                if (retVal.Count > 0)
+                {
+                    Assert.IsTrue(true);
+                }
+            }
+            
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                Assert.IsTrue(false);
             }
         }
 
