@@ -30,9 +30,16 @@ namespace UnitTests
         [TestMethod]
         public void GetArrayList()
         {
-            int[] arr = new int[5] {10, 5, 2, 1, 6 };
-            int expected = 5;
-            Assert.AreEqual(expected, arr.Length);
+            try
+            {
+                int[] arr = new int[5] { 10, 5, 2, 1, 6 };
+                int expected = 5;
+                Assert.AreEqual(expected, arr.Length);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
         [TestMethod]
