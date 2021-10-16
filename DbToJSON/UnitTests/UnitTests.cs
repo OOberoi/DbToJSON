@@ -62,8 +62,15 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void GetWriteToFile()
-        { 
+        public void WriteToFile()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }
