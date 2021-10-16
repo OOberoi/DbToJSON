@@ -89,7 +89,7 @@ namespace UnitTests
                     sb.Append(ns);
                 }
             }
-
+            sb.ToString().Normalize(NormalizationForm.FormC);
         }
     }
 }
