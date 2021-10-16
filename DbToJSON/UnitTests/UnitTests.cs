@@ -78,6 +78,8 @@ namespace UnitTests
         {
             string txt = "â, î or ô?><";
             var normalizedString = txt.Normalize(NormalizationForm.FormD);
+            StringBuilder sb = new();
+
 
         }
     }
