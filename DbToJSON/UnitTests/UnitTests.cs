@@ -80,6 +80,10 @@ namespace UnitTests
             var normalizedString = txt.Normalize(NormalizationForm.FormD);
             StringBuilder sb = new();
 
+            foreach (var ns in normalizedString)
+            {
+
+            }
 
         }
     }
