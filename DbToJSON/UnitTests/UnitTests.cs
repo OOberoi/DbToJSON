@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using System.Text;
 using System;
+using System.Globalization;
 
 namespace UnitTests
 {
@@ -82,7 +83,7 @@ namespace UnitTests
 
             foreach (var ns in normalizedString)
             {
-
+                var unicodeCat = CharUnicodeInfo.GetUnicodeCategory(ns);
             }
 
         }
