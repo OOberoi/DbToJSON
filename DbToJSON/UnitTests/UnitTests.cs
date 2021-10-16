@@ -5,6 +5,7 @@ using System.Linq;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using System.Text;
 using System;
 
 namespace UnitTests
@@ -71,6 +72,13 @@ namespace UnitTests
             {
                 throw;
             }
+        }
+
+        public void RemoveAccentedChars()
+        {
+            string txt = "â, î or ô?><";
+            var normalizedString = txt.Normalize(NormalizationForm.FormD);
+
         }
     }
 }
