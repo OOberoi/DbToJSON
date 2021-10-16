@@ -84,6 +84,10 @@ namespace UnitTests
             foreach (var ns in normalizedString)
             {
                 var unicodeCat = CharUnicodeInfo.GetUnicodeCategory(ns);
+                if (unicodeCat != UnicodeCategory.NonSpacingMark)
+                {
+                    sb.Append(ns);
+                }
             }
 
         }
