@@ -84,7 +84,7 @@ namespace UnitTests
         {
             try
             {
-                string txt = "â, î or ô?><ä ë ü Ö Ü";
+                string txt = "â, î or ô?><ä ë ü Ö Ü ã õ ñ Ã Õ Ñ";
                 var normalizedString = txt.Normalize(NormalizationForm.FormD);
                 StringBuilder sb = new();
 
