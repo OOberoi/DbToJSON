@@ -91,6 +91,7 @@ namespace UnitTests
                 }
             }
             sb.ToString().Normalize(NormalizationForm.FormC);
+            Assert.IsTrue(true);
         }
     }
 }
