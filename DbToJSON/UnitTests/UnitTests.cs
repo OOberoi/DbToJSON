@@ -63,7 +63,7 @@ namespace UnitTests
             }
         }
 
-        [TestMethod]
+        [Ignore]
         public void WriteToFile()
         {
             try
