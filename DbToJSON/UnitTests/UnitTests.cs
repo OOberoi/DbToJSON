@@ -40,7 +40,7 @@ namespace UnitTests
             }
             catch (Exception ex)
             {
-                throw;
+                ex.Message.ToString();
             }
         }
 
@@ -75,6 +75,7 @@ namespace UnitTests
             }
         }
 
+        [TestMethod]
         public void RemoveAccentedChars()
         {
             string txt = "â, î or ô?><";
