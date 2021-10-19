@@ -96,7 +96,7 @@ namespace UnitTests
                         sb.Append(ns);
                     }
                 }
-                sb.ToString().Normalize(NormalizationForm.FormC);
+                _ = sb.ToString().Normalize(NormalizationForm.FormC);
                 Assert.IsTrue(true);
             }
             catch (Exception ex)
