@@ -53,10 +53,13 @@ namespace UnitTests
             try
             {
                 using var ctx = new JsonDbContext();
-                var retVal = ctx.RepaperingInfo.ToList();
-                if (retVal.Count > 0)
+                if (ctx != null) 
                 {
-                    Assert.IsTrue(true);
+                    var retVal = ctx.RepaperingInfo.ToList();
+                    if (retVal.Count > 0)
+                    {
+                        Assert.IsTrue(true);
+                    }
                 }
             }
             
