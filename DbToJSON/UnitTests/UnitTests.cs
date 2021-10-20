@@ -52,7 +52,8 @@ namespace UnitTests
         {
             try
             {
-                var retVal = _jsonDbContext.RepaperingInfo.ToList();
+                using var ctx = new JsonDbContext();
+                var retVal = ctx.RepaperingInfo.ToList();
                 if (retVal.Count > 0)
                 {
                     Assert.IsTrue(true);
