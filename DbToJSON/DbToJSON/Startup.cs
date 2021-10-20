@@ -23,6 +23,7 @@ namespace DbToJSON
         {
             services.AddDbContext<JsonDbContext>(options =>
                 options.UseSqlServer("server=DESKTOP-9AB4882; Database=DbToJSON; trusted_connection=true;"));
+            services.AddScoped<IRepaperingInfo, RepaperingInfoRepository>();
         }
 
     }
