@@ -32,7 +32,21 @@ namespace DbToJSON.Repositories
 
         void IRepaperingInfo.GetRepaperingInfo()
         {
-            
+            try
+            {
+                using var ctx = new JsonDbContext();
+                var retVal = ctx.RepaperingInfo
+                    .Select(s => new
+                    {
+                        s.PackageId,
+                        s.PackageInstanceId,
+                        s.JSON
+                    });
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
         }
     }
 }
