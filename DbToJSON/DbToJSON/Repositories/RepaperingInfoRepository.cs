@@ -29,5 +29,10 @@ namespace DbToJSON.Repositories
         {
             throw new NotImplementedException();
         }
+
+        void IRepaperingInfo.GetRepaperingInfo()
+        {
+            
+        }
     }
 }
