@@ -11,5 +11,6 @@ namespace DbToJSON.Repositories
         string GetJSON();
         string GetJSON(string[] instanceArr);
         IList<string> GetJSONList(string[] instanceArr);
+        void GetRepaperingInfo();
     }
 }
