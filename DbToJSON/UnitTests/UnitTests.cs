@@ -61,7 +61,8 @@ namespace UnitTests
                             s.ID,
                             s.PackageId,
                             s.PackageInstanceId,
-                            s.JSON
+                            s.JSON,
+                            s.DateCreated
                         }).ToList();
                     if (retVal.Count > 0)
                     {
