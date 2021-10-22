@@ -14,6 +14,7 @@ namespace UnitTests
     [TestClass]
     public class DbToJSONUnitTests
     {
+        public IEnumerable<RepaperingInfo> RepaperingInfo { get; set; }
 
         private readonly JsonDbContext _jsonDbContext;
 
