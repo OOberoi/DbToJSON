@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Repositories
 {
-    class RepaperingInfoRepository : IRepaperingInfo
+    public class RepaperingInfoRepository : IRepaperingInfo
     {
         public RepaperingInfoRepository(JsonDbContext jsonDbContext)
         {

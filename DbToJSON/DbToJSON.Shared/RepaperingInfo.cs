@@ -2,7 +2,7 @@
 
 namespace DbToJSON.Shared
 {
-    public class RepaperingInfo
+    public class ClientRepaperingInfo
     {
         public long ID { get; set; }
         public string PackageId { get; set; }
