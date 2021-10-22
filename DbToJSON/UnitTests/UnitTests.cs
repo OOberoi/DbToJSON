@@ -14,7 +14,7 @@ namespace UnitTests
     [TestClass]
     public class DbToJSONUnitTests
     {
-        public IEnumerable<RepaperingInfo> RepaperingInfo { get; set; }
+        public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
         private readonly JsonDbContext _jsonDbContext;
 
@@ -56,7 +56,7 @@ namespace UnitTests
                 using var ctx = new JsonDbContext();
                 if (ctx != null) 
                 {
-                    var retVal = ctx.RepaperingInfo
+                    var retVal = ctx.ClientRepaperingInfo
                         .Select(s => new
                         {
                             s.ID,

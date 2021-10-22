@@ -5,7 +5,8 @@ namespace DbToJSON.Repositories
 {
     public class JsonDbContext : DbContext
     {
-        public DbSet<RepaperingInfo> RepaperingInfo { get; set; }
+        public DbSet<ClientRepaperingInfo> ClientRepaperingInfo { get; set; }
+
 
         public JsonDbContext(DbContextOptions<JsonDbContext> options) : base(options)
         {
@@ -24,7 +25,7 @@ namespace DbToJSON.Repositories
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<RepaperingInfo>(entity => entity.HasKey(e => e.ID));
+            modelBuilder.Entity<ClientRepaperingInfo>(entity => entity.HasKey(e => e.ID));
         }
     }
 }

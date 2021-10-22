@@ -35,7 +35,7 @@ namespace DbToJSON.Repositories
             try
             {
                 using var ctx = new JsonDbContext();
-                var retVal = ctx.RepaperingInfo
+                var retVal = ctx.ClientRepaperingInfo
                     .Select(s => new
                     {
                         s.PackageId,
