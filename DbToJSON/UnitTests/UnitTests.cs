@@ -82,21 +82,29 @@ namespace UnitTests
         [TestMethod]
         public void AddRepaperingInfo()
         {
-            using var ctx = new JsonDbContext();
-            var cli = new ClientRepaperingInfo
+            try
             {
-                ID = 2,
-                ClientId = "38AX67",
-                JSON = "JSON DATA",
-                PackageId = "iawdev89890",
-                PackageInstanceId = "iawdev89890_38AX67",
-                Comments = "Package Sent",
-                DateCreated = DateTime.Now,
-                DateUpdated = DateTime.Now
-            };
-            ctx.ClientRepaperingInfo.Add(cli);
-            ctx.SaveChanges();
-            Assert.IsTrue(true);
+                using var ctx = new JsonDbContext();
+                var cli = new ClientRepaperingInfo
+                {
+                    ID = 2,
+                    ClientId = "38AX67",
+                    JSON = "JSON DATA",
+                    PackageId = "iawdev89890",
+                    PackageInstanceId = "iawdev89890_38AX67",
+                    Comments = "Package Sent",
+                    DateCreated = DateTime.Now,
+                    DateUpdated = DateTime.Now
+                };
+                ctx.ClientRepaperingInfo.Add(cli);
+                ctx.SaveChanges();
+                Assert.IsTrue(true);
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                Assert.IsTrue(false);
+            }
         }
 
         [Ignore]
