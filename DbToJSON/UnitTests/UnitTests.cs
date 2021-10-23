@@ -83,6 +83,10 @@ namespace UnitTests
         public void AddRepaperingInfo()
         {
             using var ctx = new JsonDbContext();
+            var cli = new ClientRepaperingInfo
+            {
+
+            };
 
         }
 
