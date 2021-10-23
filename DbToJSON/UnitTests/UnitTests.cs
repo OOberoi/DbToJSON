@@ -79,6 +79,11 @@ namespace UnitTests
             }
         }
 
+        [TestMethod]
+        public void AddRepaperingInfo()
+        { 
+        }
+
         [Ignore]
         public void WriteToFile()
         {
