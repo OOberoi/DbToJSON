@@ -96,7 +96,7 @@ namespace UnitTests
             };
             ctx.ClientRepaperingInfo.Add(cli);
             ctx.SaveChanges();
-
+            Assert.IsTrue(true);
         }
 
         [Ignore]
