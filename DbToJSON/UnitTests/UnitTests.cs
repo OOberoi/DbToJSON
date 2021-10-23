@@ -87,7 +87,6 @@ namespace UnitTests
                 using var ctx = new JsonDbContext();
                 var cli = new ClientRepaperingInfo
                 {
-                    ID = 2,
                     ClientId = "38AX67",
                     JSON = "JSON DATA",
                     PackageId = "iawdev89890",
