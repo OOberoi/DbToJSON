@@ -94,6 +94,8 @@ namespace UnitTests
                 DateCreated = DateTime.Now,
                 DateUpdated = DateTime.Now
             };
+            ctx.ClientRepaperingInfo.Add(cli);
+            ctx.SaveChanges();
 
         }
 
