@@ -81,7 +81,9 @@ namespace UnitTests
 
         [TestMethod]
         public void AddRepaperingInfo()
-        { 
+        {
+            using var ctx = new JsonDbContext();
+
         }
 
         [Ignore]
