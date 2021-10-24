@@ -115,7 +115,8 @@ namespace UnitTests
                 var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
                 cli.Comments = "testing the update";
                 cli.DateUpdated = DateTime.Now;
-                ctx.SaveChanges();     
+                ctx.SaveChanges();
+                Assert.IsTrue(true);
             }
             catch (Exception ex)
             { 
