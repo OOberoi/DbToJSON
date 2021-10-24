@@ -111,6 +111,8 @@ namespace UnitTests
         {
             try
             {
+                using var ctx = new JsonDbContext();
+
                 
             }
             catch (Exception ex)
