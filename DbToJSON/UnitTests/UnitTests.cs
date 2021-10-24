@@ -113,7 +113,8 @@ namespace UnitTests
             {
                 using var ctx = new JsonDbContext();
                 var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
-
+                cli.Comments = "testing the update";
+                cli.DateUpdated = DateTime.Now;
                 
             }
             catch (Exception ex)
