@@ -108,7 +108,15 @@ namespace UnitTests
 
         [TestMethod]
         public void UpdateRepaperingInfo()
-        { 
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            { 
+            
+            }
         }
 
 
