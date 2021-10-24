@@ -106,6 +106,7 @@ namespace UnitTests
             }
         }
 
+        [TestMethod]
         public void UpdateRepaperingInfo()
         { 
         }
