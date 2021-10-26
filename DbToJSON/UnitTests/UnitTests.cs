@@ -119,8 +119,8 @@ namespace UnitTests
                 Assert.IsTrue(true);
             }
             catch (Exception ex)
-            { 
-            
+            {
+                ex.Message.ToString();
             }
         }
 
