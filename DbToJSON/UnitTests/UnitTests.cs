@@ -126,6 +126,10 @@ namespace UnitTests
             }
         }
 
+        public void DeleteRepaperingInfo()
+        { 
+        }
+
 
         [Ignore]
         public void WriteToFile()
