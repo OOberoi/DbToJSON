@@ -130,6 +130,7 @@ namespace UnitTests
         public void DeleteRepaperingInfo()
         {
             using var ctx = new JsonDbContext();
+            var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
 
         }
 
