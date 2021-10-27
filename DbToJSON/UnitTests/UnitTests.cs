@@ -113,7 +113,8 @@ namespace UnitTests
             {
                 using var ctx = new JsonDbContext();
                 var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
-                cli.Comments = "testing the update";
+                cli.Comments = "testing the update again";
+                cli.JSON = "Json update";
                 cli.DateUpdated = DateTime.Now;
                 ctx.SaveChanges();
                 Assert.IsTrue(true);
