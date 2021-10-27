@@ -126,6 +126,7 @@ namespace UnitTests
             }
         }
 
+        [TestMethod]
         public void DeleteRepaperingInfo()
         { 
         }
