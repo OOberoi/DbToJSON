@@ -128,7 +128,9 @@ namespace UnitTests
 
         [TestMethod]
         public void DeleteRepaperingInfo()
-        { 
+        {
+            using var ctx = new JsonDbContext();
+
         }
 
 
