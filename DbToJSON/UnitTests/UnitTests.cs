@@ -131,7 +131,8 @@ namespace UnitTests
         {
             using var ctx = new JsonDbContext();
             var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
-
+            ctx.Remove(cli);
+            ctx.SaveChanges();
         }
 
 
