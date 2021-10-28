@@ -112,8 +112,8 @@ namespace UnitTests
             try
             {
                 using var ctx = new JsonDbContext();
-                var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
-                cli.Comments = "testing the update again";
+                var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 3);
+                cli.Comments = "testing the update the third time";
                 cli.JSON = "Json update";
                 cli.DateUpdated = DateTime.Now;
                 ctx.SaveChanges();
@@ -129,10 +129,19 @@ namespace UnitTests
         [TestMethod]
         public void DeleteRepaperingInfo()
         {
-            using var ctx = new JsonDbContext();
-            var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
-            ctx.Remove(cli);
-            ctx.SaveChanges();
+            try
+            {
+                using var ctx = new JsonDbContext();
+                var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
+                ctx.Remove(cli);
+                ctx.SaveChanges();
+                Assert.IsTrue(true);
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                Assert.IsTrue(false);
+            }
         }
 
 
