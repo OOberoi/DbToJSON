@@ -148,8 +148,15 @@ namespace UnitTests
 
         private List<ClientRepaperingInfo> GetClientRepaperingList()
         {
-            List<ClientRepaperingInfo> cliList = new();
-
+            try
+            {
+                List<ClientRepaperingInfo> cliList = new();
+            }
+            
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
         }
 
 
