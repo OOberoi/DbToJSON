@@ -146,11 +146,19 @@ namespace UnitTests
         }
 
 
+        private List<ClientRepaperingInfo> GetClientRepaperingList()
+        {
+            List<ClientRepaperingInfo> cliList = new();
+
+        }
+
+
         [Ignore]
         public void WriteToFile()
         {
             try
             {
+
 
             }
             catch (Exception ex)
