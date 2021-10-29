@@ -2,11 +2,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DbToJSON.Repositories;
 using DbToJSON.Shared;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using System.Text;
 using System;
+using System.IO;
 
 using System.Globalization;
 using System.Text.Json;
