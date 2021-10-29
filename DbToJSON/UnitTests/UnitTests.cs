@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using System.Text;
 using System;
+
 using System.Globalization;
 using System.Text.Json;
 
@@ -154,9 +155,12 @@ namespace UnitTests
                 if (ctx != null)
                 {
                     var retVal = ctx.ClientRepaperingInfo.ToList();
+                    string json = JsonSerializer.Serialize(retVal);
+                    
+                    return retVal;
                 }
-                List<ClientRepaperingInfo> cliList = new();
-                return cliList;
+                //List<ClientRepaperingInfo> cliList = new();
+               
             }
             
             catch (Exception ex)
