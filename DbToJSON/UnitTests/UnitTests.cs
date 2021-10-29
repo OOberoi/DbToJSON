@@ -151,6 +151,10 @@ namespace UnitTests
             try
             {
                 var ctx = new JsonDbContext();
+                if (ctx != null)
+                { 
+                    
+                }
                 List<ClientRepaperingInfo> cliList = new();
                 return cliList;
             }
