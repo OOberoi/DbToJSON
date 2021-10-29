@@ -150,7 +150,9 @@ namespace UnitTests
         {
             try
             {
+                var ctx = new JsonDbContext();
                 List<ClientRepaperingInfo> cliList = new();
+                return cliList;
             }
             
             catch (Exception ex)
