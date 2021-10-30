@@ -71,7 +71,7 @@ namespace UnitTests
                         }).ToList();
                     if (retVal.Count > 0)
                     {
-                        Assert.IsTrue(true);
+                        Assert.IsTrue(retVal.Count > 0);
                     }
                 }
             }
@@ -149,27 +149,7 @@ namespace UnitTests
         }
 
 
-        private List<ClientRepaperingInfo> GetClientRepaperingList()
-        {
-            try
-            {
-                var ctx = new JsonDbContext();
-                if (ctx != null)
-                {
-                    var retVal = ctx.ClientRepaperingInfo.ToList();
-                    string json = JsonSerializer.Serialize(retVal);
-                    
-                    return retVal;
-                }
-                //List<ClientRepaperingInfo> cliList = new();
-               
-            }
-            
-            catch (Exception ex)
-            {
-                ex.Message.ToString();
-            }
-        }
+        
 
 
         [Ignore]
@@ -177,7 +157,9 @@ namespace UnitTests
         {
             try
             {
-
+                //string json = JsonSerializer.Serialize(retVal);
+                //File.WriteAllText(@"");
+                //return retVal;
 
             }
             catch (Exception ex)
@@ -213,5 +195,24 @@ namespace UnitTests
             }            
         }
     }
+
+    private static List<ClientRepaperingInfo> GetClientRepaperingList()
+    {
+        try
+        {
+            var ctx = new JsonDbContext();
+            if (ctx != null)
+            {
+                return ctx.ClientRepaperingInfo.ToList();
+            }
+                return null;
+        }
+        
+        catch (Exception ex)
+        {
+            ex.Message.ToString();            
+        }
+    }
+        
 }
  
