@@ -196,7 +196,7 @@ namespace UnitTests
         }
     }
 
-    private static List<ClientRepaperingInfo> GetClientRepaperingListing()
+    private static List<ClientRepaperingInfo> GetClientRepaperingList()
     {
         try
         {
@@ -207,7 +207,6 @@ namespace UnitTests
             }
             return null;
         }
-
         catch (Exception ex)
         {
             ex.Message.ToString();
