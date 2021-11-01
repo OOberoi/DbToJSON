@@ -203,7 +203,10 @@ namespace UnitTests
             var ctx = new JsonDbContext();
             if (ctx != null)
             {
-                return ctx.ClientRepaperingInfo.ToList();
+                if (ctx.ClientRepaperingInfo.Any())
+                {
+                    return ctx.ClientRepaperingInfo.ToList();
+                }
             }
             return null;
         }
