@@ -208,11 +208,11 @@ namespace UnitTests
                     return ctx.ClientRepaperingInfo.ToList();
                 }
             }
-            return null;
         }
         catch (Exception ex)
         {
             ex.Message.ToString();
+            return null;
         }
     }
         
