@@ -3,6 +3,7 @@ using DbToJSON.Shared;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -160,6 +161,7 @@ namespace UnitTests
                     {
                         var retVal = ctx.ClientRepaperingInfo.ToList();
                         string json = JsonSerializer.Serialize(retVal);
+                        File.WriteAllText(@"~myFile.json", json);
                     }
                 }
                 //string json = JsonSerializer.Serialize(retVal);
