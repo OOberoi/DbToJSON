@@ -1,16 +1,12 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DbToJSON.Repositories;
 using DbToJSON.Shared;
-using System.Linq;
-using System.Text.Json.Serialization;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
-using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.IO;
-
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
+using System.Text;
 using System.Text.Json;
 
 namespace UnitTests
@@ -157,9 +153,10 @@ namespace UnitTests
         {
             try
             {
-                //string json = JsonSerializer.Serialize(retVal);
-                //File.WriteAllText(@"");
-                //return retVal;
+                var ctx = new JsonDbContext();
+                string json = JsonSerializer.Serialize(retVal);
+                File.WriteAllText(@"");
+                return retVal;
 
             }
             catch (Exception ex)
@@ -196,25 +193,19 @@ namespace UnitTests
         }
     }
 
-    private static List<ClientRepaperingInfo> GetClientRepaperingList()
-    {
-        try
-        {
-            var ctx = new JsonDbContext();
-            if (ctx != null)
-            {
-                if (ctx.ClientRepaperingInfo.Any())
-                {
-                    return ctx.ClientRepaperingInfo.ToList();
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            ex.Message.ToString();
-            return null;
-        }
-    }
+        
+    //public static IList<ClientRepaperingInfo> GetRepaperingList()
+    //{
+    //    var ctx = new JsonDbContext();
+    //    if (ctx != null)
+    //    {
+    //        if (ctx.ClientRepaperingInfo.Any())
+    //        {
+    //            return ctx.ClientRepaperingInfo.ToList();
+    //        }
+    //    }
+    //    return null;
+    //}
         
 }
  

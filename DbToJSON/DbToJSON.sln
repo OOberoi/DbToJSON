@@ -12,7 +12,9 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQL", "SQL\SQL.sqlproj", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbToJSON.Shared", "DbToJSON.Shared\DbToJSON.Shared.csproj", "{8838F96C-F62F-428D-8BBB-467C8515C976}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{389A999C-6C8B-4044-80B7-6C0361E0135D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{389A999C-6C8B-4044-80B7-6C0361E0135D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{59DDF384-F240-41C7-8C84-C10AFDEFB510}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
