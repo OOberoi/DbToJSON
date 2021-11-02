@@ -154,6 +154,10 @@ namespace UnitTests
             try
             {
                 var ctx = new JsonDbContext();
+                if (ctx != null)
+                { 
+                
+                    }
                 string json = JsonSerializer.Serialize(retVal);
                 File.WriteAllText(@"");
                 return retVal;
