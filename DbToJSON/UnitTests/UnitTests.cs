@@ -157,13 +157,14 @@ namespace UnitTests
                 if (ctx != null)
                 {
                     if (ctx.ClientRepaperingInfo.Any())
-                    { 
-                    
+                    {
+                        var retVal = ctx.ClientRepaperingInfo.ToList();
+                        
                     }
                 }
-                string json = JsonSerializer.Serialize(retVal);
-                File.WriteAllText(@"");
-                return retVal;
+                //string json = JsonSerializer.Serialize(retVal);
+                //File.WriteAllText(@"");
+                //return retVal;
 
             }
             catch (Exception ex)
