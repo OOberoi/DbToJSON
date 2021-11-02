@@ -155,9 +155,12 @@ namespace UnitTests
             {
                 var ctx = new JsonDbContext();
                 if (ctx != null)
-                { 
-                
+                {
+                    if (ctx.ClientRepaperingInfo.Any())
+                    { 
+                    
                     }
+                }
                 string json = JsonSerializer.Serialize(retVal);
                 File.WriteAllText(@"");
                 return retVal;
