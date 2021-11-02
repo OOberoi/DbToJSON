@@ -159,7 +159,7 @@ namespace UnitTests
                     if (ctx.ClientRepaperingInfo.Any())
                     {
                         var retVal = ctx.ClientRepaperingInfo.ToList();
-                        
+                        string json = JsonSerializer.Serialize(retVal);
                     }
                 }
                 //string json = JsonSerializer.Serialize(retVal);
