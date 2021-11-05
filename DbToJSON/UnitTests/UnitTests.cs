@@ -149,7 +149,7 @@ namespace UnitTests
         
 
 
-        [Ignore]
+        [TestMethod]
         public void WriteToFile()
         {
             try
@@ -164,10 +164,6 @@ namespace UnitTests
                         File.WriteAllText(@"~myFile.json", json);
                     }
                 }
-                //string json = JsonSerializer.Serialize(retVal);
-                //File.WriteAllText(@"");
-                //return retVal;
-
             }
             catch (Exception ex)
             {
