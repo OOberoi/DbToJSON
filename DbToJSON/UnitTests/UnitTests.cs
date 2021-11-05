@@ -168,6 +168,7 @@ namespace UnitTests
             catch (Exception ex)
             {
                 ex.Message.ToString();
+                Assert.IsTrue(false);
             }
         }
 
