@@ -163,7 +163,7 @@ namespace UnitTests
                     {
                         var retVal = ctx.ClientRepaperingInfo.ToList();
                         string json = JsonSerializer.Serialize(retVal);
-                        File.WriteAllText(@"~myFile.json", json);
+                        File.WriteAllText(filePath + fileName, json);
                     }
                 }
             }
