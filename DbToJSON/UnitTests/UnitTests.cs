@@ -167,7 +167,7 @@ namespace UnitTests
             }
             catch (Exception ex)
             {
-                throw;
+                ex.Message.ToString();
             }
         }
 
