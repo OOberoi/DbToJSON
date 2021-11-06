@@ -15,7 +15,6 @@ namespace UnitTests
     [TestClass]
     public class DbToJSONUnitTests
     {
-        private const string path = Directory.GetCurrentDirectory();
         private const string fileName = "MyJson.txt";
         private const string filePath = "@C://Users//oober//source//repos//Console Apps//DbToJSON//DbToJSON//";
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
@@ -151,6 +150,7 @@ namespace UnitTests
         [TestMethod]
         public void WriteToFile()
         {
+            string path = Directory.GetCurrentDirectory();
             try
             {
                 var ctx = new JsonDbContext();
