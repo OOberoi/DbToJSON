@@ -147,10 +147,6 @@ namespace UnitTests
             }
         }
 
-
-        
-
-
         [TestMethod]
         public void WriteToFile()
         {
@@ -159,12 +155,11 @@ namespace UnitTests
                 var ctx = new JsonDbContext();
                 if (ctx != null)
                 {
-                    if (ctx.ClientRepaperingInfo.Any())
-                    {
+
                         var retVal = ctx.ClientRepaperingInfo.ToList();
                         string json = JsonSerializer.Serialize(retVal);
                         File.WriteAllText(filePath + fileName, json);
-                    }
+                    
                 }
             }
             catch (Exception ex)
