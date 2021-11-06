@@ -155,10 +155,13 @@ namespace UnitTests
                 var ctx = new JsonDbContext();
                 if (ctx != null)
                 {
+                    var retVal = ctx.ClientRepaperingInfo
+                        .Select(s => new
+                        {
 
-                        var retVal = ctx.ClientRepaperingInfo.ToList();
-                        string json = JsonSerializer.Serialize(retVal);
-                        File.WriteAllText(filePath + fileName, json);
+                        });
+                    string json = JsonSerializer.Serialize(retVal);
+                    File.WriteAllText(filePath + fileName, json);
                     
                 }
             }
