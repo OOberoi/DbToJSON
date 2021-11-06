@@ -164,9 +164,12 @@ namespace UnitTests
                             s.JSON,
                             s.DateCreated
                         }).ToList();
-                    string json = JsonSerializer.Serialize(retVal);
-                    File.WriteAllText(filePath + fileName, json);
-                    
+                    if (retVal.Count > 0)
+                    {
+                        string json = JsonSerializer.Serialize(retVal);
+                        File.WriteAllText(filePath + fileName, json);
+                    }
+
                 }
             }
             catch (Exception ex)
