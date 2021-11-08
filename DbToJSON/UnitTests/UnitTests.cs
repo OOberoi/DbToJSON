@@ -167,7 +167,7 @@ namespace UnitTests
                     if (retVal.Count > 0)
                     {
                         string json = JsonSerializer.Serialize(retVal);
-                        File.WriteAllText(path + fileName, json);
+                        File.WriteAllText(path + "\\" + fileName, json);
                     }
 
                 }
