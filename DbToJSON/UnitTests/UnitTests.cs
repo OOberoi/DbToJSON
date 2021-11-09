@@ -15,7 +15,9 @@ namespace UnitTests
     [TestClass]
     public class DbToJSONUnitTests
     {
-        private const string fileName = "MyJson.txt";
+        private static readonly string extn = ".txt";
+        private static readonly string timeStamp = DateTime.Now.ToString();
+        private static readonly string fileName = "MyJson" + timeStamp + extn;
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
         private readonly JsonDbContext _jsonDbContext;
