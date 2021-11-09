@@ -17,7 +17,8 @@ namespace UnitTests
     {
         private static readonly string extn = ".txt";
         private static readonly string timeStamp = DateTime.Now.ToString();
-        private static readonly string fileName = "MyJson" + timeStamp + extn;
+        private static readonly string hyphen = "_";
+        private static readonly string fileName = "MyJson" + hyphen + timeStamp + extn;
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
         private readonly JsonDbContext _jsonDbContext;
