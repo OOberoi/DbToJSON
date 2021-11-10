@@ -18,7 +18,8 @@ namespace UnitTests
         private static readonly string extn = ".txt";
         private static readonly string timeStamp = DateTime.Now.Date.ToShortDateString();
         private static readonly string month = DateTime.Now.Date.Month.ToString();
-        private static readonly string day = DateTime.Now.Date.Day.ToString(); 
+        private static readonly string day = DateTime.Now.Date.Day.ToString();
+        private static readonly string year = DateTime.Now.Year.ToString();
 
         private static readonly string hyphen = "_";
         private static readonly string fileName = "MyJson" + hyphen + timeStamp + extn;
