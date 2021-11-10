@@ -213,20 +213,6 @@ namespace UnitTests
             }            
         }
     }
-
-        
-    //public static IList<ClientRepaperingInfo> GetRepaperingList()
-    //{
-    //    var ctx = new JsonDbContext();
-    //    if (ctx != null)
-    //    {
-    //        if (ctx.ClientRepaperingInfo.Any())
-    //        {
-    //            return ctx.ClientRepaperingInfo.ToList();
-    //        }
-    //    }
-    //    return null;
-    //}
         
 }
  
