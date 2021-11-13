@@ -95,11 +95,11 @@ namespace UnitTests
                 using var ctx = new JsonDbContext();
                 var cli = new ClientRepaperingInfo
                 {
-                    ClientId = "38AX68",
+                    ClientId = "38AX69",
                     JSON = "JSON DATA New",
                     PackageId = "iawdev89891",
-                    PackageInstanceId = "iawdev89890_38AX68",
-                    Comments = "Package Sent to TD",
+                    PackageInstanceId = "iawdev89891_38AX69",
+                    Comments = "Package Sent to BMO",
                     DateCreated = DateTime.Now,
                     DateUpdated = DateTime.Now
                 };
