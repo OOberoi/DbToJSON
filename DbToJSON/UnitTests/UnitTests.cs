@@ -21,7 +21,7 @@ namespace UnitTests
         private static readonly string day = DateTime.Now.Date.Day.ToString();
         private static readonly string extn = ".txt";
         private static readonly string jsonFN = "MyDbJson";
-        private static readonly string accentedTxt = "MyAccented";
+        private static readonly string accentedFN = "MyAccented";
         private static readonly string fileName =  hyphen + year + month + day + extn;
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
@@ -207,7 +207,7 @@ namespace UnitTests
                     }
                 }
                 _ = sb.ToString().Normalize(NormalizationForm.FormC);
-                //File.WriteAllText()
+                File.WriteAllText(path + "\\" + accentedFN + fileName, sb.ToString());
                 Assert.IsTrue(true);
             }
             catch (Exception ex)
