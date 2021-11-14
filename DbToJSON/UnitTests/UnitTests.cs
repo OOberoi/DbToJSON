@@ -21,7 +21,7 @@ namespace UnitTests
         private static readonly string day = DateTime.Now.Date.Day.ToString();
         private static readonly string extn = ".txt";
         private static readonly string json = "MyDbJson";
-        private static readonly string fileName = "MyDbJson" + hyphen + year + month + day + extn;
+        private static readonly string fileName =  hyphen + year + month + day + extn;
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
         private readonly JsonDbContext _jsonDbContext;
