@@ -20,7 +20,8 @@ namespace UnitTests
         private static readonly string month = DateTime.Now.Date.Month.ToString();
         private static readonly string day = DateTime.Now.Date.Day.ToString();
         private static readonly string extn = ".txt";
-        private static readonly string json = "MyDbJson";
+        private static readonly string jsonFN = "MyDbJson";
+        private static readonly string accentedTxt = "MyAccented";
         private static readonly string fileName =  hyphen + year + month + day + extn;
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
@@ -175,7 +176,7 @@ namespace UnitTests
                     if (retVal.Count > 0)
                     {
                         string json = JsonSerializer.Serialize(retVal);
-                        File.WriteAllText(path + "\\" + fileName, json);
+                        File.WriteAllText(jsonFN + "\\" + path + "\\" + fileName, json);
                     }
 
                 }
