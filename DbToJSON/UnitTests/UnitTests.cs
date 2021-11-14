@@ -20,6 +20,7 @@ namespace UnitTests
         private static readonly string month = DateTime.Now.Date.Month.ToString();
         private static readonly string day = DateTime.Now.Date.Day.ToString();
         private static readonly string extn = ".txt";
+        private static readonly string json = "MyDbJson";
         private static readonly string fileName = "MyDbJson" + hyphen + year + month + day + extn;
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
@@ -168,6 +169,7 @@ namespace UnitTests
                             s.PackageId,
                             s.PackageInstanceId,
                             s.JSON,
+                            s.Comments,
                             s.DateCreated
                         }).ToList();
                     if (retVal.Count > 0)
