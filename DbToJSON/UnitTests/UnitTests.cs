@@ -213,7 +213,7 @@ namespace UnitTests
             catch (Exception ex)
             {
                 ex.Message.ToString();
-                Assert.IsTrue(true);
+                Assert.IsTrue(false);
             }            
         }
     }
