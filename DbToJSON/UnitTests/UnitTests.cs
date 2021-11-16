@@ -208,7 +208,7 @@ namespace UnitTests
                     }
                 }
                 _ = sb.ToString().Normalize(NormalizationForm.FormC);
-                File.WriteAllText(path + "\\" + accentedFN + fileName, sb.ToString());
+                File.WriteAllText(path + backSlashes + accentedFN + fileName, sb.ToString());
                 Assert.IsTrue(true);
             }
             catch (Exception ex)
