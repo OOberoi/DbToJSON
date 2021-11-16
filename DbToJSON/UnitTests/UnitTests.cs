@@ -16,6 +16,7 @@ namespace UnitTests
     public class DbToJSONUnitTests
     {
         private static readonly string hyphen = "_";
+        private static readonly string backSlashes = "\\";
         private static readonly string year = DateTime.Now.Year.ToString();
         private static readonly string month = DateTime.Now.Date.Month.ToString();
         private static readonly string day = DateTime.Now.Date.Day.ToString();
