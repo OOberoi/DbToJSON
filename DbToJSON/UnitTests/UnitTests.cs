@@ -15,6 +15,7 @@ namespace UnitTests
     [TestClass]
     public class DbToJSONUnitTests
     {
+        #region "Private Static Vars"
         private static readonly string hyphen = "_";
         private static readonly string backSlashes = "\\";
         private static readonly string year = DateTime.Now.Year.ToString();
@@ -23,8 +24,10 @@ namespace UnitTests
         private static readonly string extn = ".txt";
         private static readonly string jsonFN = "MyDbJson";
         private static readonly string accentedFN = "MyAccented";
-        private static readonly string fileName =  hyphen + year + month + day + extn;
+        private static readonly string fileName = hyphen + year + month + day + extn;
         private static readonly string path = Directory.GetCurrentDirectory();
+        #endregion
+
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
         private readonly JsonDbContext _jsonDbContext;
