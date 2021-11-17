@@ -24,6 +24,7 @@ namespace UnitTests
         private static readonly string jsonFN = "MyDbJson";
         private static readonly string accentedFN = "MyAccented";
         private static readonly string fileName =  hyphen + year + month + day + extn;
+        private static readonly string path = Directory.GetCurrentDirectory();
         public IEnumerable<ClientRepaperingInfo> RepaperingInfo { get; set; }
 
         private readonly JsonDbContext _jsonDbContext;
