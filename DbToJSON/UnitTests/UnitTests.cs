@@ -159,7 +159,6 @@ namespace UnitTests
         [TestMethod]
         public void WriteToFile()
         {
-            string path = Directory.GetCurrentDirectory();
             try
             {
                 var ctx = new JsonDbContext();
