@@ -9,11 +9,12 @@ namespace DbToJSON.Repositories
 {
     public class RepaperingInfoRepository : IRepaperingInfo
     {
+        private readonly JsonDbContext _jsonDbContext;
         public RepaperingInfoRepository(JsonDbContext jsonDbContext)
         {
             _jsonDbContext = jsonDbContext;
         }
-        private readonly JsonDbContext _jsonDbContext;
+        
         string IRepaperingInfo.GetJSON(string[] instanceArr) =>
             // get the payload
             // read the payload and format it to well formed JSON string
