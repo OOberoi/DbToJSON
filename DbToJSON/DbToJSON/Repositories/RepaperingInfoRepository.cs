@@ -14,17 +14,19 @@ namespace DbToJSON.Repositories
         {
             _jsonDbContext = jsonDbContext;
         }
-        
+
+        public string GetJSON()
+        {
+            throw new NotImplementedException();
+        }
+
         string IRepaperingInfo.GetJSON(string[] instanceArr) =>
             // get the payload
             // read the payload and format it to well formed JSON string
             // Send it as an email to a recipient
             throw new NotImplementedException();
 
-        public string GetJSON()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         IList<string> IRepaperingInfo.GetJSONList(string[] instanceArr)
         {
