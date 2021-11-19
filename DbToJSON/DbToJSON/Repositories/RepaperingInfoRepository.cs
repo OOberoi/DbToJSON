@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DbToJSON.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +21,21 @@ namespace DbToJSON.Repositories
             return _jsonDbContext.ClientRepaperingInfo.ToList().ToString();
         }
 
+        IEnumerable<ClientRepaperingInfo> IRepaperingInfo.GetAllRepaperingInfo()
+        {
+            throw new NotImplementedException();
+        }
+
         string IRepaperingInfo.GetJSON(string[] instanceArr) =>
             // get the payload
             // read the payload and format it to well formed JSON string
             // Send it as an email to a recipient
             throw new NotImplementedException();
 
-        
+        string IRepaperingInfo.GetJSON()
+        {
+            throw new NotImplementedException();
+        }
 
         IList<string> IRepaperingInfo.GetJSONList(string[] instanceArr)
         {
