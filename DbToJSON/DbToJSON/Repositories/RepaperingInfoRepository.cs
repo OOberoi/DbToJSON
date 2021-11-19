@@ -17,7 +17,7 @@ namespace DbToJSON.Repositories
 
         public string GetJSON()
         {
-            throw new NotImplementedException();
+            return _jsonDbContext.ClientRepaperingInfo.ToList().ToString();
         }
 
         string IRepaperingInfo.GetJSON(string[] instanceArr) =>
