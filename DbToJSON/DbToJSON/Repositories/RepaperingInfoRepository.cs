@@ -40,6 +40,10 @@ namespace DbToJSON.Repositories
             // read the payload and format it to well formed JSON string
             // Send it as an email to a recipient
             // Check if instanceArr contains item(s)
+            if (instanceArr.Length > 0)
+            {
+
+            }
             throw new NotImplementedException();
         }
             
