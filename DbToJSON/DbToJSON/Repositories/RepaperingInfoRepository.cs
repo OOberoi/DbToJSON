@@ -37,9 +37,10 @@ namespace DbToJSON.Repositories
         string IRepaperingInfo.GetJSON(string[] instanceArr) 
         {
             // get the payload
-            var ctx = _jsonDbContext.ClientRepaperingInfo.ToList();
+             var ctx = _jsonDbContext.ClientRepaperingInfo.ToList();
             if (ctx != null)
             { 
+           
                 
             }
 
