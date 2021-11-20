@@ -23,7 +23,15 @@ namespace DbToJSON.Repositories
 
         IEnumerable<ClientRepaperingInfo> IRepaperingInfo.GetAllRepaperingInfo()
         {
-            return _jsonDbContext.ClientRepaperingInfo;
+            try
+            {
+                return _jsonDbContext.ClientRepaperingInfo;
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
+            return null;
         }
 
         string IRepaperingInfo.GetJSON(string[] instanceArr) =>
