@@ -34,11 +34,14 @@ namespace DbToJSON.Repositories
             return null;
         }
 
-        string IRepaperingInfo.GetJSON(string[] instanceArr) =>
+        string IRepaperingInfo.GetJSON(string[] instanceArr) 
             // get the payload
             // read the payload and format it to well formed JSON string
             // Send it as an email to a recipient
+            {
             throw new NotImplementedException();
+        }
+            
 
         string IRepaperingInfo.GetJSON()
         {
