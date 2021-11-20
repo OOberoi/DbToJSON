@@ -37,6 +37,12 @@ namespace DbToJSON.Repositories
         string IRepaperingInfo.GetJSON(string[] instanceArr) 
         {
             // get the payload
+            var ctx = _jsonDbContext.ClientRepaperingInfo.ToList();
+            if (ctx != null)
+            { 
+                
+            }
+
             // read the payload and format it to well formed JSON string
             // Send it as an email to a recipient
             // Check if instanceArr contains item(s)
