@@ -42,7 +42,10 @@ namespace DbToJSON.Repositories
             // Check if instanceArr contains item(s)
             if (instanceArr.Length > 0)
             {
-
+                for (int i = 0; i <= instanceArr.Length; i++)
+                { 
+                    
+                }
             }
             throw new NotImplementedException();
         }
