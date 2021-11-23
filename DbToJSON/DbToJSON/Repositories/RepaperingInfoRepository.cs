@@ -39,21 +39,20 @@ namespace DbToJSON.Repositories
             // get the payload
              var ctx = _jsonDbContext.ClientRepaperingInfo.ToList();
             if (ctx != null)
-            { 
-           
-                
+            {
+                if (instanceArr.Length > 0)
+                {
+                    for (int i = 0; i <= instanceArr.Length; i++)
+                    {
+
+                    }
+                }
             }
 
             // read the payload and format it to well formed JSON string
             // Send it as an email to a recipient
             // Check if instanceArr contains item(s)
-            if (instanceArr.Length > 0)
-            {
-                for (int i = 0; i <= instanceArr.Length; i++)
-                { 
-                    
-                }
-            }
+            
             throw new NotImplementedException();
         }
             
