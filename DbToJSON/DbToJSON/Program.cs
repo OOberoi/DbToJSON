@@ -3,14 +3,21 @@ using System;
 
 namespace DbToJSON
 {
-    class Program
+    public class Program
     {
         private readonly IRepaperingInfo _repaperingInfo;
 
-        static void Main()
+
+        public Program(IRepaperingInfo repaperingInfo)
+        {
+            _repaperingInfo = repaperingInfo;
+        }
+
+        public static void Main()
         {
            
             Console.WriteLine("Hello World!");
+            //_repaperingInfo.GetRepaperingInfo();
         }
     }
 }
