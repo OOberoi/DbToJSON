@@ -11,6 +11,11 @@ namespace DbToJSON.Repositories
     public class RepaperingInfoRepository : IRepaperingInfo
     {
         private readonly JsonDbContext _jsonDbContext;
+
+        public RepaperingInfoRepository()
+        {
+        }
+
         public RepaperingInfoRepository(JsonDbContext jsonDbContext)
         {
             _jsonDbContext = jsonDbContext;
