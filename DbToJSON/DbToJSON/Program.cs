@@ -11,6 +11,7 @@ namespace DbToJSON
             
             string json = _repaperingInfo.GetJSON();
             Console.WriteLine(json);
+            Console.ReadLine();
         }
     }
 }
