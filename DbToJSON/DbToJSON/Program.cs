@@ -8,8 +8,9 @@ namespace DbToJSON
         public static void Main()
         {
             RepaperingInfoRepository _repaperingInfo = new();
-            Console.WriteLine("Hello World!");
+            
             string json = _repaperingInfo.GetJSON();
+            Console.WriteLine(json);
         }
     }
 }
