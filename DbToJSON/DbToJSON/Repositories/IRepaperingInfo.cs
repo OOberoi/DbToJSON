@@ -1,9 +1,5 @@
-﻿using System;
+﻿using DbToJSON.Shared;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DbToJSON.Shared;
 
 namespace DbToJSON.Repositories
 {
