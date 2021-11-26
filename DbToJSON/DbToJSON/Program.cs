@@ -35,6 +35,7 @@ namespace DbToJSON
                     {
                         Console.WriteLine(retVal.Count > 0);
                     }
+                    Console.ReadLine();
                 }
             }
 
