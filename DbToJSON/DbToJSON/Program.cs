@@ -29,7 +29,7 @@ namespace DbToJSON
                     {
                         foreach (var item in retVal)
                         {
-                            Console.WriteLine(item.ID);
+                            Console.WriteLine($"The values are: {item.ID + item.PackageInstanceId}");
                         }
                     }
                     Console.ReadLine();
