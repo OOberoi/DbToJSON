@@ -13,9 +13,9 @@ namespace DbToJSON
             #region "GetJSON"
             try
             {
-                //string json = _repaperingInfo.GetJSON();
-                //Console.WriteLine(json);
-                //Console.ReadLine();
+                string json = _repaperingInfo.GetJSON();
+                Console.WriteLine(json);
+                Console.ReadLine();
             }
             catch (Exception ex)
             { 
