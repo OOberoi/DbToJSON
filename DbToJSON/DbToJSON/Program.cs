@@ -16,7 +16,7 @@ namespace DbToJSON
                 using var ctx = new JsonDbContext();
                 if (ctx != null)
                 {
-                    string json = _repaperingInfo.GetJSON();
+                    string json = ctx.ClientRepaperingInfo.ToList().ToString();
                     Console.WriteLine(json);
                     Console.ReadLine();
                 }
