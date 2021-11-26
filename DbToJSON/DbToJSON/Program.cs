@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.IO;
+using System.Text;
 
 namespace DbToJSON
 {
@@ -10,7 +11,7 @@ namespace DbToJSON
         public static void Main()
         {
             RepaperingInfoRepository _repaperingInfo = new();
-            
+            StringBuilder sb = new();
 
             #region "GetJSON"
             try
