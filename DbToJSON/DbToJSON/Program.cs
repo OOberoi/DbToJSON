@@ -16,14 +16,17 @@ namespace DbToJSON
                 using var ctx = new JsonDbContext();
                 if (ctx != null)
                 {
-                    string json = ctx.ClientRepaperingInfo.ToList().ToString();
-                    Console.WriteLine(json);
+                    var retVal = ctx.ClientRepaperingInfo.ToList();
+                    foreach (var item in retVal)
+                    {
+                        Console.WriteLine(item.ID);
+                    }
                     Console.ReadLine();
                 }
             }
             catch (Exception ex)
-            { 
-                
+            {
+                ex.Message.ToString();
             }
             
             #endregion
