@@ -33,7 +33,7 @@ namespace DbToJSON
                         }).ToList();
                     if (retVal.Count > 0)
                     {
-                        Console.WriteLine(retVal.Count > 0);
+                        Console.WriteLine($"The value is {retVal.Count}");
                     }
                     Console.ReadLine();
                 }
