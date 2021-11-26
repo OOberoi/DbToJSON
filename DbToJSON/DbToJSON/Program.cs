@@ -11,6 +11,13 @@ namespace DbToJSON
             RepaperingInfoRepository _repaperingInfo = new();
 
             #region "GetJSON"
+            try
+            {
+            }
+            catch (Exception ex)
+            { 
+                
+            }
             //string json = _repaperingInfo.GetJSON();
             //Console.WriteLine(json);
             //Console.ReadLine();
