@@ -13,9 +13,13 @@ namespace DbToJSON
             #region "GetJSON"
             try
             {
-                string json = _repaperingInfo.GetJSON();
-                Console.WriteLine(json);
-                Console.ReadLine();
+                using var ctx = new JsonDbContext();
+                if (ctx != null)
+                {
+                    string json = _repaperingInfo.GetJSON();
+                    Console.WriteLine(json);
+                    Console.ReadLine();
+                }
             }
             catch (Exception ex)
             { 
