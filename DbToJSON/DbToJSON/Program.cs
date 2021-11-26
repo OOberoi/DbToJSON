@@ -17,9 +17,12 @@ namespace DbToJSON
                 if (ctx != null)
                 {
                     var retVal = ctx.ClientRepaperingInfo.ToList();
-                    foreach (var item in retVal)
+                    if (retVal.Count > 0)
                     {
-                        Console.WriteLine(item.ID);
+                        foreach (var item in retVal)
+                        {
+                            Console.WriteLine(item.ID);
+                        }
                     }
                     Console.ReadLine();
                 }
