@@ -29,7 +29,7 @@ namespace DbToJSON
                     {
                         foreach (var item in retVal)
                         {
-                            Console.WriteLine($"The values are: {item.ID + ", " + item.PackageInstanceId + ", " + item.PackageId + ", " + item.JSON}");
+                            Console.WriteLine($"The values are: {item.ID + ", " + item.PackageInstanceId + ", " + item.PackageId + ", " + item.JSON + ", " + item.DateCreated}");
                         }
                     }
                     Console.ReadLine();
