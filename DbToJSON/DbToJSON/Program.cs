@@ -13,6 +13,9 @@ namespace DbToJSON
             RepaperingInfoRepository _repaperingInfo = new();
             StringBuilder sb = new();
 
+            #region AddRepaperingInfo
+            #endregion
+
             #region "GetJSON"
             try
             {
