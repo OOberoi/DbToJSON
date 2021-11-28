@@ -58,7 +58,7 @@ namespace DbToJSON
                             s.PackageId,
                             s.PackageInstanceId,
                             s.JSON,
-                            s.DateCreated
+                            V = s.DateCreated.ToString("M/d/yyyy")
                         }).ToList();
                     if (retVal.Count > 0)
                     {
