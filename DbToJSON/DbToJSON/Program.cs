@@ -20,11 +20,11 @@ namespace DbToJSON
                 using var ctx = new JsonDbContext();
                 var cli = new ClientRepaperingInfo()
                 {
-                    ClientId = "38AX69",
+                    ClientId = "38AX70",
                     JSON = "JSON DATA New",
-                    PackageId = "iawdev89891",
-                    PackageInstanceId = "iawdev89891_38AX69",
-                    Comments = "Package Sent to BMO",
+                    PackageId = "iawdev89892",
+                    PackageInstanceId = "iawdev89892_38AX70",
+                    Comments = "Package Sent to BNS",
                     DateCreated = DateTime.Now,
                     DateUpdated = DateTime.Now
                 };
