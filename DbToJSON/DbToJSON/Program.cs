@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using DbToJSON.Shared;
 
 namespace DbToJSON
 {
@@ -14,6 +15,26 @@ namespace DbToJSON
             StringBuilder sb = new();
 
             #region AddRepaperingInfo
+            try
+            {
+                using var ctx = new JsonDbContext();
+                var cli = new ClientRepaperingInfo()
+                {
+                    ClientId = "38AX69",
+                    JSON = "JSON DATA New",
+                    PackageId = "iawdev89891",
+                    PackageInstanceId = "iawdev89891_38AX69",
+                    Comments = "Package Sent to BMO",
+                    DateCreated = DateTime.Now,
+                    DateUpdated = DateTime.Now
+                };
+                ctx.ClientRepaperingInfo.Add(cli);
+                ctx.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
 
             #endregion
 
@@ -71,14 +92,11 @@ namespace DbToJSON
                         Console.ReadLine();
                     }
                 }
-
                 catch (Exception ex)
                 {
                     ex.Message.ToString();
                 }
-
             #endregion
-
         }
     }
    
