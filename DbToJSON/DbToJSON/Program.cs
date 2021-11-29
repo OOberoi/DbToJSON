@@ -99,7 +99,19 @@ namespace DbToJSON
             #endregion
 
             #region AddRepaperingInfo
-
+            try
+            {
+                using var ctx = new JsonDbContext();
+                var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 3);
+                cli.Comments = "regression testing";
+                cli.JSON = "Json update";
+                cli.DateUpdated = DateTime.Now;
+                ctx.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
             #endregion
         }
     }
