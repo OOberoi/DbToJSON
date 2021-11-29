@@ -7,13 +7,14 @@ using System.Text;
 namespace DbToJSON
 {
     public class Program
-    {       
+    {
         public static void Main()
         {
             RepaperingInfoRepository _repaperingInfo = new();
             StringBuilder sb = new();
 
             #region AddRepaperingInfo
+
             #endregion
 
             #region "GetJSON"
@@ -45,37 +46,40 @@ namespace DbToJSON
             {
                 ex.Message.ToString();
             }
-            
+
             #endregion
 
             #region "GetRepaperingInfo"
-            try
-            {
-                using var ctx = new JsonDbContext();
-                if (ctx != null)
+                try
                 {
-                    var retVal = ctx.ClientRepaperingInfo
-                        .Select(s => new
-                        {
-                            s.ID,
-                            s.PackageId,
-                            s.PackageInstanceId,
-                            s.JSON,
-                            V = s.DateCreated.ToString("M/d/yyyy")
-                        }).ToList();
-                    if (retVal.Count > 0)
+                    using var ctx = new JsonDbContext();
+                    if (ctx != null)
                     {
-                        Console.WriteLine($"The value is {retVal.Count}");
+                        var retVal = ctx.ClientRepaperingInfo
+                            .Select(s => new
+                            {
+                                s.ID,
+                                s.PackageId,
+                                s.PackageInstanceId,
+                                s.JSON,
+                                V = s.DateCreated.ToString("M/d/yyyy")
+                            }).ToList();
+                        if (retVal.Count > 0)
+                        {
+                            Console.WriteLine($"The value is {retVal.Count}");
+                        }
+                        Console.ReadLine();
                     }
-                    Console.ReadLine();
                 }
-            }
 
-            catch (Exception ex)
-            {
-                ex.Message.ToString();
-            }
+                catch (Exception ex)
+                {
+                    ex.Message.ToString();
+                }
+
             #endregion
+
         }
     }
+   
 }
