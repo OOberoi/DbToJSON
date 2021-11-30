@@ -115,6 +115,17 @@ namespace DbToJSON
             #endregion
 
             #region DeleteRepaperingInfo
+            try
+            {
+                using var ctx = new JsonDbContext();
+                var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 2);
+                ctx.Remove(cli);
+                ctx.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
             #endregion
         }
     }
