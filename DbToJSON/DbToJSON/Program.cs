@@ -169,7 +169,6 @@ namespace DbToJSON
             catch (Exception ex)
             {
                 ex.Message.ToString();
-                Assert.IsTrue(false);
             }
             #endregion
         }
