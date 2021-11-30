@@ -113,6 +113,9 @@ namespace DbToJSON
                 ex.Message.ToString();
             }
             #endregion
+
+            #region DeleteRepaperingInfo
+            #endregion
         }
     }
    
