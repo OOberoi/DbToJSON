@@ -3,12 +3,26 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.Json;
 using DbToJSON.Shared;
 
 namespace DbToJSON
 {
+    
     public class Program
     {
+        #region "Private Static Vars"
+        private static readonly string hyphen = "_";
+        private static readonly string backSlashes = "\\";
+        private static readonly string year = DateTime.Now.Year.ToString();
+        private static readonly string month = DateTime.Now.Date.Month.ToString();
+        private static readonly string day = DateTime.Now.Date.Day.ToString();
+        private static readonly string extn = ".txt";
+        private static readonly string jsonFN = "MyDbJson";
+        private static readonly string accentedFN = "MyAccented";
+        private static readonly string fileName = hyphen + year + month + day + extn;
+        private static readonly string path = Directory.GetCurrentDirectory();
+        #endregion
         public static void Main()
         {
             RepaperingInfoRepository _repaperingInfo = new();
