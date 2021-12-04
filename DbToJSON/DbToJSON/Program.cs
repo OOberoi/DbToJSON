@@ -52,7 +52,7 @@ namespace DbToJSON
 
             #endregion
 
-            #region "GetJSON"
+            #region GetJSON
             try
             {
                 using var ctx = new JsonDbContext();
