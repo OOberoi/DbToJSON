@@ -187,6 +187,9 @@ namespace DbToJSON
                 ex.Message.ToString();
             }
             #endregion
+
+            #region RemoveAccentedCharacters
+            #endregion
         }
     }
    
