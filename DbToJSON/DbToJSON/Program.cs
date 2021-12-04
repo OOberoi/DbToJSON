@@ -189,8 +189,33 @@ namespace DbToJSON
             #endregion
 
             #region RemoveAccentedCharacters
-            #endregion
-        }
+            public void RemoveAccentedChars()
+            {
+                try
+                {
+                    string txt = "â, î or ô?><ä ë ü Ö Ü ã õ ñ Ã Õ Ñ";
+                    var normalizedString = txt.Normalize(NormalizationForm.FormD);
+                    StringBuilder sb = new();
+
+                    foreach (var ns in normalizedString)
+                    {
+                        var unicodeCat = CharUnicodeInfo.GetUnicodeCategory(ns);
+                        if (unicodeCat != UnicodeCategory.NonSpacingMark)
+                        {
+                            sb.Append(ns);
+                        }
+                    }
+                    _ = sb.ToString().Normalize(NormalizationForm.FormC);
+                    File.WriteAllText(path + backSlashes + accentedFN + fileName, sb.ToString());
+                    Assert.IsTrue(true);
+                }
+                catch (Exception ex)
+                {
+                    ex.Message.ToString();
+                    Assert.IsTrue(false);
+                }
+                #endregion
+            }
     }
    
 }
