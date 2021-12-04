@@ -84,7 +84,7 @@ namespace DbToJSON
 
             #endregion
 
-            #region "GetRepaperingInfo"
+            #region GetRepaperingInfo
                 try
                 {
                     using var ctx = new JsonDbContext();
