@@ -5,6 +5,7 @@ using System.IO;
 using System.Text;
 using System.Text.Json;
 using DbToJSON.Shared;
+using System.Globalization;
 
 namespace DbToJSON
 {
@@ -189,13 +190,11 @@ namespace DbToJSON
             #endregion
 
             #region RemoveAccentedCharacters
-            public void RemoveAccentedChars()
-            {
                 try
                 {
                     string txt = "â, î or ô?><ä ë ü Ö Ü ã õ ñ Ã Õ Ñ";
                     var normalizedString = txt.Normalize(NormalizationForm.FormD);
-                    StringBuilder sb = new();
+                    StringBuilder sBuilder = new();
 
                     foreach (var ns in normalizedString)
                     {
@@ -205,14 +204,12 @@ namespace DbToJSON
                             sb.Append(ns);
                         }
                     }
-                    _ = sb.ToString().Normalize(NormalizationForm.FormC);
-                    File.WriteAllText(path + backSlashes + accentedFN + fileName, sb.ToString());
-                    Assert.IsTrue(true);
+                    _ = sBuilder.ToString().Normalize(NormalizationForm.FormC);
+                    File.WriteAllText(path + backSlashes + accentedFN + fileName, sBuilder.ToString());
                 }
                 catch (Exception ex)
                 {
                     ex.Message.ToString();
-                    Assert.IsTrue(false);
                 }
                 #endregion
             }
