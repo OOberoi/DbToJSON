@@ -1,15 +1,15 @@
 ﻿using DbToJSON.Repositories;
+using DbToJSON.Shared;
 using System;
-using System.Linq;
+using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.Json;
-using DbToJSON.Shared;
-using System.Globalization;
 
 namespace DbToJSON
 {
-    
+
     public class Program
     {
         #region "Private Static Vars"
