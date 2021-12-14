@@ -63,6 +63,10 @@ namespace UnitTests
             }
         }
 
+        public void GetProcessInstancesArr()
+        { 
+        }
+
         [TestMethod]
         public void GetRepaperingInfo()
         {
