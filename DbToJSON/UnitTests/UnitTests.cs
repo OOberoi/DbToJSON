@@ -68,6 +68,7 @@ namespace UnitTests
         {
             try
             {
+                var procInstances = new string[] {"rbcdev000001", "rbcdev000002", "rbcdev000003", "rbcdev000004", "rbcdev000005" };
             }
             catch (Exception ex)
             {
