@@ -63,8 +63,16 @@ namespace UnitTests
             }
         }
 
+        [TestMethod]
         public void GetProcessInstancesArr()
-        { 
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString(); 
+            }
         }
 
         [TestMethod]
