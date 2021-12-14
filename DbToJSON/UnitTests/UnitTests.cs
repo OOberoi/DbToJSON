@@ -39,7 +39,7 @@ namespace UnitTests
         {
             _jsonDbContext = jsonDbContext;
         }
-
+        #region Test Methods
         [TestMethod]
         public void AddTest()
         {
@@ -69,7 +69,7 @@ namespace UnitTests
             try
             {
                 using var ctx = new JsonDbContext();
-                if (ctx != null) 
+                if (ctx != null)
                 {
                     var retVal = ctx.ClientRepaperingInfo
                         .Select(s => new
@@ -86,7 +86,7 @@ namespace UnitTests
                     }
                 }
             }
-            
+
             catch (Exception ex)
             {
                 ex.Message.ToString();
@@ -217,9 +217,11 @@ namespace UnitTests
             {
                 ex.Message.ToString();
                 Assert.IsTrue(false);
-            }            
+            }
         }
+        #endregion
     }
-        
+
+
+
 }
- 
