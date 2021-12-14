@@ -104,8 +104,8 @@ namespace UnitTests
                 {
                     ClientId = "38AX69",
                     JSON = "JSON DATA New",
-                    PackageId = "iawdev89891",
-                    PackageInstanceId = "iawdev89891_38AX69",
+                    PackageId = "rbcdev89891",
+                    PackageInstanceId = "rbcdev89891_38AX69",
                     Comments = "Package Sent to BMO",
                     DateCreated = DateTime.Now,
                     DateUpdated = DateTime.Now
