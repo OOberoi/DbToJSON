@@ -220,6 +220,11 @@ namespace DbToJSON
                 if (procInstances.Length > 0)
                 {
                     //do something
+                    foreach (var item in procInstances)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    Console.ReadLine();
                 }
             }
             catch (Exception ex)
