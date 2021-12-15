@@ -211,8 +211,26 @@ namespace DbToJSON
                 {
                     ex.Message.ToString();
                 }
-        #endregion
+            #endregion
+
+            #region GetProcessInstanceArray
+            try
+            {
+                var procInstances = new string[] { "rbcdev000001", "rbcdev000002", "rbcdev000003", "rbcdev000004", "rbcdev000005" };
+                if (procInstances.Length > 0)
+                {
+                    //do something
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
+            
         }
+            
+    #endregion
+}
     }
    
 }
