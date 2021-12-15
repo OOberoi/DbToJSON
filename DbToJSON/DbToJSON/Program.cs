@@ -211,8 +211,8 @@ namespace DbToJSON
                 {
                     ex.Message.ToString();
                 }
-                #endregion
-            }
+        #endregion
+        }
     }
    
 }
