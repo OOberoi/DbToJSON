@@ -69,6 +69,10 @@ namespace UnitTests
             try
             {
                 var procInstances = new string[] {"rbcdev000001", "rbcdev000002", "rbcdev000003", "rbcdev000004", "rbcdev000005" };
+                if (procInstances.Length > 0)
+                {
+                    Assert.IsTrue(true);
+                }
             }
             catch (Exception ex)
             {
