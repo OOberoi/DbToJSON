@@ -33,12 +33,16 @@ namespace DbToJSON
             try
             {
                 var procInstances = new string[] { "rbcdev000001", "rbcdev000002", "rbcdev000003", "rbcdev000004", "rbcdev000005" };
+                StringBuilder sbArr = new();
                 if (procInstances.Length > 0)
                 {
                     foreach (var item in procInstances)
                     {
-                        Console.WriteLine(item + ";");
+                        sbArr.Append(item);
+                        sbArr.Append(';');
+
                     }
+                    Console.WriteLine(sbArr.ToString());
                     Console.ReadLine();
                 }
             }
