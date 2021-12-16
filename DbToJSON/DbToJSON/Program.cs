@@ -37,7 +37,7 @@ namespace DbToJSON
                 {
                     foreach (var item in procInstances)
                     {
-                        Console.WriteLine(item);
+                        Console.WriteLine(item + ";");
                     }
                     Console.ReadLine();
                 }
