@@ -29,6 +29,25 @@ namespace DbToJSON
             RepaperingInfoRepository _repaperingInfo = new();
             StringBuilder sb = new();
 
+            #region GetProcessInstanceArray
+            try
+            {
+                var procInstances = new string[] { "rbcdev000001", "rbcdev000002", "rbcdev000003", "rbcdev000004", "rbcdev000005" };
+                if (procInstances.Length > 0)
+                {
+                    foreach (var item in procInstances)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    Console.ReadLine();
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
+            #endregion
+
             #region AddRepaperingInfo
             try
             {
@@ -213,25 +232,7 @@ namespace DbToJSON
                 }
             #endregion
 
-            #region GetProcessInstanceArray
-            try
-            {
-                var procInstances = new string[] { "rbcdev000001", "rbcdev000002", "rbcdev000003", "rbcdev000004", "rbcdev000005" };
-                if (procInstances.Length > 0)
-                {
-                    //do something
-                    foreach (var item in procInstances)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    Console.ReadLine();
-                }
-            }
-            catch (Exception ex)
-            {
-                ex.Message.ToString();
-            }
-            #endregion
+           
         }
     }
 }
