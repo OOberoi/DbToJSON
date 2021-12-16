@@ -40,7 +40,6 @@ namespace DbToJSON
                     {
                         sbArr.Append(item);
                         sbArr.Append(';');
-
                     }
                     Console.WriteLine(sbArr.ToString());
                     Console.ReadLine();
