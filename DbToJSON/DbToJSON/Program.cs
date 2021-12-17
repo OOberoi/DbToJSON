@@ -238,5 +238,10 @@ namespace DbToJSON
            
         }
     }
+
+    public static class Utils
+    { 
+        
+    }
 }
 
