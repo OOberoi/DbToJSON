@@ -238,10 +238,9 @@ namespace DbToJSON
                 }
                 return sbArr.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
-                ex.Message.ToString();
             }
         }
         #endregion
