@@ -29,7 +29,8 @@ namespace DbToJSON
             RepaperingInfoRepository _repaperingInfo = new();
             StringBuilder sb = new();
 
-            
+            //test the getProcessInstance function
+            string myArr = Utils.GetProcessInstance();
 
             #region AddRepaperingInfo
             try
