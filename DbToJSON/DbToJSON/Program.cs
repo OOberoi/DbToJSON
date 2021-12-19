@@ -31,7 +31,7 @@ namespace DbToJSON
 
             //test the getProcessInstance function
             string myArr = Utils.GetProcessInstance();
-            string json = JsonSerializer.Serialize(myArr);
+            string jsonSerialize = JsonSerializer.Serialize(myArr);
 
             Console.WriteLine(myArr);
 
