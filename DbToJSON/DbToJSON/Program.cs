@@ -31,6 +31,7 @@ namespace DbToJSON
 
             //test the getProcessInstance function
             string myArr = Utils.GetProcessInstance();
+            Console.WriteLine(myArr);
 
             #region AddRepaperingInfo
             try
