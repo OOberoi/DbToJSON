@@ -31,11 +31,14 @@ namespace DbToJSON
             StringBuilder sb = new();
 
             //test the getProcessInstance function
+            #region ArrayInfo
             string myArr = Utils.GetProcessInstance();
             string jsonSerialize = JsonSerializer.Serialize(myArr);
             File.WriteAllText(path + backSlashes + jsonFN + fileName, jsonSerialize);
-
             Console.WriteLine(myArr);
+            #endregion
+
+
 
             #region AddRepaperingInfo
             try
