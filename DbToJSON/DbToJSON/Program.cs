@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Collections;
 
 namespace DbToJSON
 {
@@ -251,7 +252,10 @@ namespace DbToJSON
         #endregion
 
         #region GetRepaperingInfo
+        public static IList GetRepaperngInfo()
+        { 
 
+        }
         #endregion
 
     }
