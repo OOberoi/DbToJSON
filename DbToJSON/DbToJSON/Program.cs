@@ -253,8 +253,29 @@ namespace DbToJSON
 
         #region GetRepaperingInfo
         public static IList GetRepaperngInfo()
-        { 
-
+        {
+            try
+            {
+                IList retVal = null;
+                using var ctx = new JsonDbContext();
+                if (ctx != null)
+                {
+                    retVal = ctx.ClientRepaperingInfo
+                        .Select(s => new
+                        {
+                            s.ID,
+                            s.PackageId,
+                            s.PackageInstanceId,
+                            s.JSON,
+                            V = s.DateCreated.ToString("M/d/yyyy")
+                        }).ToList();
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
         #endregion
 
