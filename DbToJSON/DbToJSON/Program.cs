@@ -30,7 +30,6 @@ namespace DbToJSON
             RepaperingInfoRepository  _repaperingInfo = new();
             StringBuilder sb = new();
 
-            //test the getProcessInstance function
             #region ArrayInfo
             string myArr = Utils.GetProcessInstance();
             string jsonSerialize = JsonSerializer.Serialize(myArr);
@@ -39,6 +38,8 @@ namespace DbToJSON
             #endregion
 
             #region GetRepaperingInfoAndWriteToFile"
+            var myList = Utils.GetRepaperngInfo();
+
             #endregion
 
 
