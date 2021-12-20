@@ -26,7 +26,7 @@ namespace DbToJSON
         #endregion
         public static void Main()
         {
-            RepaperingInfoRepository _repaperingInfo = new();
+            RepaperingInfoRepository  _repaperingInfo = new();
             StringBuilder sb = new();
 
             //test the getProcessInstance function
@@ -249,7 +249,11 @@ namespace DbToJSON
             }
         }
         #endregion
-        
+
+        #region GetRepaperingInfo
+
+        #endregion
+
     }
 }
 
