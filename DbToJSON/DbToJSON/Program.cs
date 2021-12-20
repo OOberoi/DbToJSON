@@ -30,13 +30,6 @@ namespace DbToJSON
             RepaperingInfoRepository  _repaperingInfo = new();
             StringBuilder sb = new();
 
-            #region ArrayInfo
-            string myArr = Utils.GetProcessInstance();
-            string jsonSerialize = JsonSerializer.Serialize(myArr);
-            File.WriteAllText(path + backSlashes + jsonFN + fileName, jsonSerialize);
-            Console.WriteLine(myArr);
-            #endregion
-
             #region GetRepaperingInfoAndWriteToFile"
             var myList = Utils.GetRepaperngInfo();
             if (myList.Count > 0)
@@ -44,8 +37,16 @@ namespace DbToJSON
                 Console.WriteLine($"The value is: {myList.Count}");
                 Console.ReadLine();
             }
-
             #endregion
+
+            #region ArrayInfo
+            string myArr = Utils.GetProcessInstance();
+            string jsonSerialize = JsonSerializer.Serialize(myArr);
+            File.WriteAllText(path + backSlashes + jsonFN + fileName, jsonSerialize);
+            Console.WriteLine(myArr);
+            #endregion
+
+            
 
 
             #region AddRepaperingInfo
