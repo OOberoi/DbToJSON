@@ -39,6 +39,11 @@ namespace DbToJSON
 
             #region GetRepaperingInfoAndWriteToFile"
             var myList = Utils.GetRepaperngInfo();
+            if (myList.Count > 0)
+            {
+                Console.WriteLine($"The value is: {myList.Count}");
+                Console.ReadLine();
+            }
 
             #endregion
 
