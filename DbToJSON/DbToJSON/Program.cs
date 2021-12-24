@@ -41,7 +41,8 @@ namespace DbToJSON
                 {
                     Console.WriteLine($"ID:{item.ID}");
                     Console.WriteLine($"Client ID:{item.ClientId}");
-
+                    Console.WriteLine($"Package Instance ID:{item.PackageInstanceId}");
+                    Console.WriteLine($"Package ID:{item.PackageId}");
                 }
             }
             Console.ReadLine();
