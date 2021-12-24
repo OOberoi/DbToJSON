@@ -39,7 +39,9 @@ namespace DbToJSON
                 
                 foreach (var item in myList)
                 {
-                    //Console.WriteLine(item.);    
+                    Console.WriteLine($"ID:{item.ID}");
+                    Console.WriteLine($"Client ID:{item.ClientId}");
+
                 }
             }
             Console.ReadLine();
