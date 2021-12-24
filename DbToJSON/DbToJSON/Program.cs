@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace DbToJSON
 {
@@ -35,9 +36,12 @@ namespace DbToJSON
             if (myList.Count > 0)
             {
                 Console.WriteLine($"The value is: {myList.Count}");
+                
+                foreach (var item in myList)
+                {
+                    //Console.WriteLine(item.);    
+                }
             }
-
-
             Console.ReadLine();
             #endregion
 
@@ -265,7 +269,7 @@ namespace DbToJSON
         #endregion
 
         #region GetRepaperingInfo
-        public static IList GetRepaperngInfo()
+        public static List<ClientRepaperingInfo> GetRepaperngInfo()
         {
             try
             {
@@ -280,7 +284,7 @@ namespace DbToJSON
                         s.JSON,
                         V = s.DateCreated.ToString("M/d/yyyy")
                     }).ToList();
-                return retVal;
+                return (List<ClientRepaperingInfo>)retVal;
             }
             catch (Exception)
             {
