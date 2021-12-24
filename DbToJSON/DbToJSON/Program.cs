@@ -269,19 +269,16 @@ namespace DbToJSON
             {
                 IList retVal = null;
                 using var ctx = new JsonDbContext();
-                if (ctx != null)
-                {
-                    retVal = ctx.ClientRepaperingInfo
-                        .Select(s => new
-                        {
-                            s.ID,
-                            s.PackageId,
-                            s.PackageInstanceId,
-                            s.JSON,
-                            V = s.DateCreated.ToString("M/d/yyyy")
-                        }).ToList();
-                }
-                return null;
+                retVal = ctx.ClientRepaperingInfo
+                    .Select(s => new
+                    {
+                        s.ID,
+                        s.PackageId,
+                        s.PackageInstanceId,
+                        s.JSON,
+                        V = s.DateCreated.ToString("M/d/yyyy")
+                    }).ToList();
+                return retVal;
             }
             catch (Exception)
             {
