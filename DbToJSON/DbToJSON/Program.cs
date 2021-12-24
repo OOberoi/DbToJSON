@@ -45,8 +45,7 @@ namespace DbToJSON
             File.WriteAllText(path + backSlashes + jsonFN + fileName, jsonSerialize);
             Console.WriteLine(myArr);
             #endregion
-
-            
+                  
 
 
             #region AddRepaperingInfo
