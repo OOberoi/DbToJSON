@@ -33,17 +33,16 @@ namespace DbToJSON
 
             #region GetRepaperingInfoAndWriteToFile"
             var myList = Utils.GetRepaperngInfo();
+
+            for (int i = 0; i < myList.Count; i++)
+            {
+                Console.WriteLine(myList[i].ToString());
+            }
+            Console.ReadLine(); 
+
             if (myList.Count > 0)
             {
                 Console.WriteLine($"The value is: {myList.Count}");
-                
-                foreach (var item in myList)
-                {
-                    Console.WriteLine($"ID:{item.ID}");
-                    Console.WriteLine($"Client ID:{item.ClientId}");
-                    Console.WriteLine($"Package Instance ID:{item.PackageInstanceId}");
-                    Console.WriteLine($"Package ID:{item.PackageId}");
-                }
             }
             Console.ReadLine();
             #endregion
@@ -272,13 +271,13 @@ namespace DbToJSON
         #endregion
 
         #region GetRepaperingInfo
-        public static List<ClientRepaperingInfo> GetRepaperngInfo()
+        public static IList GetRepaperngInfo()
         {
             try
             {
-                IList retVal = null;
+                IList retVal;
                 using var ctx = new JsonDbContext();
-                retVal = ctx.ClientRepaperingInfo
+                 retVal = ctx.ClientRepaperingInfo
                     .Select(s => new
                     {
                         s.ID,
@@ -287,7 +286,7 @@ namespace DbToJSON
                         s.JSON,
                         V = s.DateCreated.ToString("M/d/yyyy")
                     }).ToList();
-                return (List<ClientRepaperingInfo>)retVal;
+                return retVal;
             }
             catch (Exception)
             {
