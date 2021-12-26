@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace DbToJSON
 {
@@ -32,11 +33,18 @@ namespace DbToJSON
 
             #region GetRepaperingInfoAndWriteToFile"
             var myList = Utils.GetRepaperngInfo();
+
+            for (int i = 0; i < myList.Count; i++)
+            {
+                Console.WriteLine(myList[i].ToString());
+            }
+            Console.ReadLine(); 
+
             if (myList.Count > 0)
             {
                 Console.WriteLine($"The value is: {myList.Count}");
-                Console.ReadLine();
             }
+            Console.ReadLine();
             #endregion
 
             #region ArrayInfo
@@ -45,8 +53,7 @@ namespace DbToJSON
             File.WriteAllText(path + backSlashes + jsonFN + fileName, jsonSerialize);
             Console.WriteLine(myArr);
             #endregion
-
-            
+                  
 
 
             #region AddRepaperingInfo
@@ -268,8 +275,9 @@ namespace DbToJSON
         {
             try
             {
-                IList retVal = null;
+                IList retVal;
                 using var ctx = new JsonDbContext();
+<<<<<<< HEAD
                 if (ctx != null)
                 {
                     retVal = ctx.ClientRepaperingInfo
@@ -282,6 +290,17 @@ namespace DbToJSON
                             V = s.DateCreated.ToString("M/d/yyyy")
                         }).ToList();
                 }
+=======
+                 retVal = ctx.ClientRepaperingInfo
+                    .Select(s => new
+                    {
+                        s.ID,
+                        s.PackageId,
+                        s.PackageInstanceId,
+                        s.JSON,
+                        V = s.DateCreated.ToString("M/d/yyyy")
+                    }).ToList();
+>>>>>>> cab818d58f6e2e2a5c71ef4ca5e244b26bcf4736
                 return retVal;
             }
             catch (Exception)
