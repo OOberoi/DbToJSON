@@ -282,7 +282,7 @@ namespace DbToJSON
                             V = s.DateCreated.ToString("M/d/yyyy")
                         }).ToList();
                 }
-                return null;
+                return retVal;
             }
             catch (Exception)
             {
