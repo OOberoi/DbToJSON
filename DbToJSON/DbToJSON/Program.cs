@@ -38,8 +38,7 @@ namespace DbToJSON
             {
                 Console.WriteLine(myList[i].ToString());
             }
-            Console.ReadLine(); 
-
+            
             if (myList.Count > 0)
             {
                 Console.WriteLine($"The value is: {myList.Count}");
