@@ -28,7 +28,7 @@ namespace DbToJSON
         #endregion
         public static void Main()
         {
-            RepaperingInfoRepository  _repaperingInfo = new();
+            //RepaperingInfoRepository  _repaperingInfo = new();
             StringBuilder sb = new();
 
             #region GetRepaperingInfoAndWriteToFile"
@@ -277,7 +277,6 @@ namespace DbToJSON
             {
                 IList retVal;
                 using var ctx = new JsonDbContext();
-<<<<<<< HEAD
                 if (ctx != null)
                 {
                     retVal = ctx.ClientRepaperingInfo
@@ -290,7 +289,6 @@ namespace DbToJSON
                             V = s.DateCreated.ToString("M/d/yyyy")
                         }).ToList();
                 }
-=======
                  retVal = ctx.ClientRepaperingInfo
                     .Select(s => new
                     {
@@ -300,7 +298,6 @@ namespace DbToJSON
                         s.JSON,
                         V = s.DateCreated.ToString("M/d/yyyy")
                     }).ToList();
->>>>>>> cab818d58f6e2e2a5c71ef4ca5e244b26bcf4736
                 return retVal;
             }
             catch (Exception)
