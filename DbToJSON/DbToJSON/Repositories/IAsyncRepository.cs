@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Repositories
 {
-    internal interface IAsyncRepository
+    public interface IAsyncRepository<T> where T : class
     {
+
     }
 }
