@@ -34,7 +34,7 @@ namespace DbToJSON
             #region GetRepaperingInfoAndWriteToFile"
             var myList = Utils.GetRepaperngInfo();
 
-            for (int i = 0; i < myList.Count; i++)
+            for (int i = 0; i < myList.Count - 1; i++)
             {
                 Console.WriteLine(myList[i].ToString());
             }
