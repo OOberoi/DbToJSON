@@ -8,5 +8,10 @@ namespace DbToJSON.Events.Commands
 {
     public class CreateEventCommand
     {
+        public int ID { get; set; }
+        public Guid myGuid { get; set; }
+        public string Name { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Price { get; set; }
     }
 }
