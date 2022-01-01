@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		GlobalUsings.cs = GlobalUsings.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{720426C5-CD57-449C-A69D-C55784967F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbToJSON.Infrastructure", "DbToJSON.Infrastructure\DbToJSON.Infrastructure.csproj", "{BC7A6252-AA82-4333-AAD9-C11C546A2DF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,9 +49,16 @@ Global
 		{389A999C-6C8B-4044-80B7-6C0361E0135D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{389A999C-6C8B-4044-80B7-6C0361E0135D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{389A999C-6C8B-4044-80B7-6C0361E0135D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7A6252-AA82-4333-AAD9-C11C546A2DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7A6252-AA82-4333-AAD9-C11C546A2DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7A6252-AA82-4333-AAD9-C11C546A2DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7A6252-AA82-4333-AAD9-C11C546A2DF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC7A6252-AA82-4333-AAD9-C11C546A2DF1} = {720426C5-CD57-449C-A69D-C55784967F95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB3BF464-B321-4D64-89AB-0133EE86BDC1}
