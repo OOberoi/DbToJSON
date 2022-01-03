@@ -25,11 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbToJSON.Infrastructure", "DbToJSON.Infrastructure\DbToJSON.Infrastructure.csproj", "{BC7A6252-AA82-4333-AAD9-C11C546A2DF1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mail", "Mail", "{C3B7B073-7B2B-4049-BC89-40B72E01067A}"
-	ProjectSection(SolutionItems) = preProject
-		EmailService.cs = EmailService.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,7 +59,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BC7A6252-AA82-4333-AAD9-C11C546A2DF1} = {720426C5-CD57-449C-A69D-C55784967F95}
-		{C3B7B073-7B2B-4049-BC89-40B72E01067A} = {720426C5-CD57-449C-A69D-C55784967F95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB3BF464-B321-4D64-89AB-0133EE86BDC1}
