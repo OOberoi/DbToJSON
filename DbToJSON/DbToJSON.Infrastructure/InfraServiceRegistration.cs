@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Infrastructure
 {
-    public class InfraServiceRegistration
+    public static class InfraServiceRegistration
     {
+        
     }
 }
