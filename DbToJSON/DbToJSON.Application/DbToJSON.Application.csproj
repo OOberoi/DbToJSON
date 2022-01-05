@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Contracts\Identity\" />
     <Folder Include="Contracts\Infrastructure\" />
+    <Folder Include="Contracts\Persistence\" />
   </ItemGroup>
 
 </Project>
