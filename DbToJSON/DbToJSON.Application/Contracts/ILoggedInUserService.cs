@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Application.Contracts
 {
-    internal interface ILoggedInUserService
+    public interface ILoggedInUserService
     {
+        public string UserId { get; set; }
+        public string UserName { get; set; }    
     }
 }
