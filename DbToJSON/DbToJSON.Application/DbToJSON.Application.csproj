@@ -10,6 +10,7 @@
     <Folder Include="Contracts\Identity\" />
     <Folder Include="Contracts\Infrastructure\" />
     <Folder Include="Contracts\Persistence\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>
