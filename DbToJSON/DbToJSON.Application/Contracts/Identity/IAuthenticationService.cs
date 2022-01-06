@@ -9,6 +9,7 @@ namespace DbToJSON.Application.Contracts.Identity
 {
     public interface IAuthenticationService
     {
-        //Task<Auth>
+        Task<AuthenticationRequest> AuthenticateAsync(AuthenticationRequest request); 
+        
     }
 }
