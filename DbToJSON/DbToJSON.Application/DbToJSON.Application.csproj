@@ -7,12 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\Identity\" />
     <Folder Include="Contracts\Infrastructure\" />
     <Folder Include="Contracts\Persistence\" />
     <Folder Include="Exceptions\" />
     <Folder Include="FeatureSet\" />
-    <Folder Include="Models\" />
     <Folder Include="Mappings\" />
     <Folder Include="Responses\" />
   </ItemGroup>
