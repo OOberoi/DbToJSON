@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DbToJSON.Application.Contracts.Identity
+namespace DbToJSON.Application.Models
 {
-    public interface IAuthenticationService
+    public class AuthenticationRequest
     {
-        //Task<Auth>
+        public string Email { get; set; }
     }
 }
