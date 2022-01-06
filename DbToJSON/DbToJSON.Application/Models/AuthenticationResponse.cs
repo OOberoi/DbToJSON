@@ -8,5 +8,8 @@ namespace DbToJSON.Application.Models
 {
     public class AuthenticationResponse
     {
+        public string Id { get; set; }
+        public string UserName { get; set; }    
+
     }
 }
