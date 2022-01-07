@@ -11,7 +11,6 @@
     <Folder Include="Exceptions\" />
     <Folder Include="FeatureSet\" />
     <Folder Include="Mappings\" />
-    <Folder Include="Models\Mail\" />
     <Folder Include="Responses\" />
   </ItemGroup>
 
