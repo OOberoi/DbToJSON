@@ -8,5 +8,6 @@ namespace DbToJSON.Application.Models.Mail
 {
     public class Email
     {
+        public string? To { get; set; }
     }
 }
