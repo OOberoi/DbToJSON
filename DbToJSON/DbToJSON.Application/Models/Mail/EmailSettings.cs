@@ -8,5 +8,7 @@ namespace DbToJSON.Application.Models.Mail
 {
     public class EmailSettings
     {
+        public string? ApiKey { get; set; }
     }
 }
+    
