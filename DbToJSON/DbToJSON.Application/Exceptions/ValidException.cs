@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Application.Exceptions
 {
-    internal class ValidException
+    public class ValidException : ApplicationException
     {
+        public ValidException()
+        {
+
+        }
     }
 }
