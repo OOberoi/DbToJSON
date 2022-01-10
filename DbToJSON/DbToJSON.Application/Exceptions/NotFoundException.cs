@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Application.Exceptions
 {
-    internal class NotFoundException
+    public class NotFoundException : ApplicationException
     {
     }
 }
