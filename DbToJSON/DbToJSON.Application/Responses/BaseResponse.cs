@@ -17,6 +17,12 @@ namespace DbToJSON.Application.Responses
             Success = true;    
         }
 
+        public BaseResponse(string? message = null)
+        {
+            Message = message;
+            Success = true;
+        }
+
         public BaseResponse(string message, bool success)
         {
             Message = message;
