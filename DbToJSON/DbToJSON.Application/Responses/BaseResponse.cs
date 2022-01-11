@@ -8,5 +8,11 @@ namespace DbToJSON.Application.Responses
 {
     public class BaseResponse
     {
+        public bool? Success { get; set; }
+
+        public BaseResponse()
+        {
+            
+        }
     }
 }
