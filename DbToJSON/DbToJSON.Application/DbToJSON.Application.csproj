@@ -10,7 +10,6 @@
     <Folder Include="Contracts\Persistence\" />
     <Folder Include="FeatureSet\" />
     <Folder Include="Mappings\" />
-    <Folder Include="Responses\" />
   </ItemGroup>
 
   <ItemGroup>
