@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbToJSON.Application", "DbT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{CE9AC8AB-D866-4049-B62E-8E7111EBFB15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbToJSON.Api", "DbToJSON.Api\DbToJSON.Api.csproj", "{A57F0D3A-38D5-49BB-BBCD-26D9D397D4F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,12 +65,17 @@ Global
 		{F0B1CDCD-3738-4956-A3CF-8C5D9268FE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0B1CDCD-3738-4956-A3CF-8C5D9268FE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0B1CDCD-3738-4956-A3CF-8C5D9268FE38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57F0D3A-38D5-49BB-BBCD-26D9D397D4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57F0D3A-38D5-49BB-BBCD-26D9D397D4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57F0D3A-38D5-49BB-BBCD-26D9D397D4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57F0D3A-38D5-49BB-BBCD-26D9D397D4F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BC7A6252-AA82-4333-AAD9-C11C546A2DF1} = {720426C5-CD57-449C-A69D-C55784967F95}
+		{A57F0D3A-38D5-49BB-BBCD-26D9D397D4F1} = {CE9AC8AB-D866-4049-B62E-8E7111EBFB15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB3BF464-B321-4D64-89AB-0133EE86BDC1}
