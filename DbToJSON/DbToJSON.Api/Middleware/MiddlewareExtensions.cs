@@ -1,8 +1,13 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace DbToJSON.Api.Middleware
 {
-    public class MiddlewareExtensions
+    public static class MiddlewareExtensions
     {
+        public static IApplicationBuilder UseCustomExceptionHandler(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<ExceptionHandlerMiddleware>();
+        }
     }
 }
