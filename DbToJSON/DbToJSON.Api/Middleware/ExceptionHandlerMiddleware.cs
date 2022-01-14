@@ -1,5 +1,6 @@
 ﻿using DbToJSON.Application.Exceptions;
 using System;
+using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
 namespace DbToJSON.Api.Middleware
@@ -27,6 +28,7 @@ namespace DbToJSON.Api.Middleware
 
         private Task ConvertException(HttpContext context, Exception ex)
         {
+             
             throw new NotImplementedException();
         }
     }
