@@ -2,6 +2,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace DbToJSON.Api.Middleware
 {
@@ -28,8 +29,13 @@ namespace DbToJSON.Api.Middleware
 
         private Task ConvertException(HttpContext context, Exception ex)
         {
-             
-            throw new NotImplementedException();
+            HttpStatusCode httpStatusCode = HttpStatusCode.InternalServerError;
+
+            context.Response.ContentType = "application/json";
+
+            var restult = string.Empty;
+
+            
         }
     }
 }
