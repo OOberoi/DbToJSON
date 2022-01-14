@@ -35,6 +35,10 @@ namespace DbToJSON.Api.Middleware
 
             var restult = string.Empty;
 
+            switch (ex)
+            { 
+                
+            }
             
         }
     }
