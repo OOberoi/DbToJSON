@@ -1,8 +1,11 @@
 ﻿using DbToJSON.Application.Exceptions;
 using System;
+using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 using System.Net;
+
+using System.ComponentModel.DataAnnotations;
 
 namespace DbToJSON.Api.Middleware
 {
@@ -33,11 +36,18 @@ namespace DbToJSON.Api.Middleware
 
             context.Response.ContentType = "application/json";
 
-            var restult = string.Empty;
+            var result = string.Empty;
 
             switch (ex)
-            { 
-                
+            {
+                case ValidationException validationException:
+                    httpStatusCode = HttpStatusCode.BadRequest;
+                    result = JsonConvert.SerializeObject(validationException.ValidationErrors);
+                    break;
+                case BadRequestException badRequestException:
+                    httpStatusCode = HttpStatusCode.BadRequest;
+                    break;
+
             }
             
         }
