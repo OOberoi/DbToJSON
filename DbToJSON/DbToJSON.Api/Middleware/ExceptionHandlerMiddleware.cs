@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 using System.Net;
 
-using System.ComponentModel.DataAnnotations;
-
 namespace DbToJSON.Api.Middleware
 {
     public class ExceptionHandlerMiddleware
@@ -30,7 +28,7 @@ namespace DbToJSON.Api.Middleware
             }
         }
 
-        private Task ConvertException(HttpContext context, Exception ex)
+        private Task ConvertException(HttpContext context, Exception exception)
         {
             HttpStatusCode httpStatusCode = HttpStatusCode.InternalServerError;
 
@@ -38,7 +36,7 @@ namespace DbToJSON.Api.Middleware
 
             var result = string.Empty;
 
-            switch (ex)
+            switch (exception)
             {
                 case ValidationException validationException:
                     httpStatusCode = HttpStatusCode.BadRequest;
@@ -50,10 +48,18 @@ namespace DbToJSON.Api.Middleware
                 case NotFoundException NotFoundException:
                     httpStatusCode = HttpStatusCode.NotFound;
                     break;
-
+                case Exception ex:
+                    httpStatusCode = HttpStatusCode.BadRequest;
+                    break;
             }
             
             context.Response.StatusCode = (int)httpStatusCode;
+
+            if (result == null)
+            {
+                result = JsonConvert.SerializeObject(new { error = exception.Message.ToString() });
+            }
+            return context.Response.WriteAsync(result);
         }
     }
 }
