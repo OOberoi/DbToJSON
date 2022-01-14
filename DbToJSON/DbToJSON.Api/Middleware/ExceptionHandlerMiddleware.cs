@@ -47,9 +47,13 @@ namespace DbToJSON.Api.Middleware
                 case BadRequestException badRequestException:
                     httpStatusCode = HttpStatusCode.BadRequest;
                     break;
+                case NotFoundException NotFoundException:
+                    httpStatusCode = HttpStatusCode.NotFound;
+                    break;
 
             }
             
+            context.Response.StatusCode = (int)httpStatusCode;
         }
     }
 }
