@@ -8,5 +8,15 @@
         {
             _next = next;
         }
+
+        public async Task Invoke(HttpContext context)
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            { 
+            }
+        }
     }
 }
