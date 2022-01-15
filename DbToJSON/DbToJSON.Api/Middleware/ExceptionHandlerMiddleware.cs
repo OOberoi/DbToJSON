@@ -39,10 +39,10 @@ namespace DbToJSON.Api.Middleware
                     httpStatusCode = HttpStatusCode.BadRequest;
                     result = JsonConvert.SerializeObject(validationException.ValidationErrors);
                     break;
-                case BadRequestException badRequestException:
+                case BadRequestException:
                     httpStatusCode = HttpStatusCode.BadRequest;
                     break;
-                case NotFoundException NotFoundException:
+                case NotFoundException:
                     httpStatusCode = HttpStatusCode.NotFound;
                     break;
                 case Exception ex:
