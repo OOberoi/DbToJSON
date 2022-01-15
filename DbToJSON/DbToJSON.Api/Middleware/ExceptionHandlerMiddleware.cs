@@ -1,8 +1,5 @@
 ﻿using DbToJSON.Application.Exceptions;
-using System;
 using Newtonsoft.Json;
-using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
 using System.Net;
 
 namespace DbToJSON.Api.Middleware
