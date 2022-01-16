@@ -6,7 +6,7 @@ namespace DbToJSON.Api.Services
 {
     public class LoggedInUserService : ILoggedInUserService
     {
-        public string? UserId { get; set; }
+        public string? UserId { get; }
         public LoggedInUserService(IHttpContextAccessor httpContextAccessor)
         {
             UserId = httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
