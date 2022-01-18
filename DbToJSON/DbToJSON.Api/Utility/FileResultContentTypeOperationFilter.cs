@@ -12,7 +12,10 @@ namespace DbToJSON.Api.Utility
                 .FirstOrDefault();
             if (reqAttr != null)
             { 
-                oper.Responses.Clear(); 
+                oper.Responses.Clear();
+                oper.Responses.Add("200", new OpenApiResponse
+                {
+                });
             }
             return;
         }
