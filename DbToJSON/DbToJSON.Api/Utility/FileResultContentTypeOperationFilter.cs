@@ -2,5 +2,8 @@
 {
     public class FileResultContentTypeOperationFilter
     {
+        public void Apply()
+        { 
+        }
     }
 }
