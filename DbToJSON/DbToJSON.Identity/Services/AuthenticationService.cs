@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using System.IdentityModel.Tokens;
-
+using System.IdentityModel.Tokens.Jwt;
 
 namespace DbToJSON.Identity.Services
 {
