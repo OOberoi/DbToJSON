@@ -8,11 +8,14 @@ using System.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using DbToJSON.Application.Contracts.Identity;
 using DbToJSON.Application.Models;
+using DbToJSON.Identity.Models;
+
 
 namespace DbToJSON.Identity.Services
 {
     public class AuthenticationService : IAuthenticationService
     {
+        private readonly UserManager<ApplicationUser>? _userManager;
         Task<AuthenticationRequest> IAuthenticationService.AuthenticateAsync(AuthenticationRequest request)
         {
             throw new NotImplementedException();
