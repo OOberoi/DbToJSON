@@ -11,5 +11,6 @@ namespace DbToJSON.Identity.Services
 {
     public class AuthenticationService
     {
+
     }
 }
