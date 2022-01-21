@@ -9,7 +9,7 @@ using System.IdentityModel.Tokens.Jwt;
 using DbToJSON.Application.Contracts.Identity;
 using DbToJSON.Application.Models;
 using DbToJSON.Identity.Models;
-
+using DbToJSON.Application.Models.Authentication;
 
 namespace DbToJSON.Identity.Services
 {
@@ -17,6 +17,7 @@ namespace DbToJSON.Identity.Services
     {
         private readonly UserManager<ApplicationUser>? _userManager;
         private readonly SignInManager<ApplicationUser>? _signInManager;
+        private readonly JwtSettings _jwtSettings;
 
         Task<AuthenticationRequest> IAuthenticationService.AuthenticateAsync(AuthenticationRequest request)
         {
