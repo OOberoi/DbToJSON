@@ -16,6 +16,8 @@ namespace DbToJSON.Identity.Services
     public class AuthenticationService : IAuthenticationService
     {
         private readonly UserManager<ApplicationUser>? _userManager;
+        private readonly SignInManager<ApplicationUser>? _signInManager;
+
         Task<AuthenticationRequest> IAuthenticationService.AuthenticateAsync(AuthenticationRequest request)
         {
             throw new NotImplementedException();
