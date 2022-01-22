@@ -19,6 +19,12 @@ namespace DbToJSON.Identity.Services
         private readonly SignInManager<ApplicationUser>? _signInManager;
         private readonly JwtSettings _jwtSettings;
 
+        public AuthenticationService(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
+            IdentityOptions<JwtSettings> jwSettings)
+        {
+
+        }
         Task<AuthenticationRequest> IAuthenticationService.AuthenticateAsync(AuthenticationRequest request)
         {
             throw new NotImplementedException();
