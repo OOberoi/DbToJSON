@@ -30,9 +30,15 @@ namespace DbToJSON.Identity.Services
             _signInManager = signInManager;
             _jwtSettings = jwSettings.Value;
         }
-        Task<AuthenticationRequest> IAuthenticationService.AuthenticateAsync(AuthenticationRequest request)
+        async Task<AuthenticationRequest> IAuthenticationService.AuthenticateAsync(AuthenticationRequest request)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByNameAsync(request.Email);
+            if (user == null)
+            {
+                throw new Exception($"User with {request.Email} not found!!");
+            }
+
+
         }
 
         Task<RegistrationResponse> IAuthenticationService.RegisterAsync(RegistrationRequest request)
