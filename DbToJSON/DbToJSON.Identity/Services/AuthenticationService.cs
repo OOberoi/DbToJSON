@@ -67,10 +67,14 @@ namespace DbToJSON.Identity.Services
             throw new NotImplementedException();
         }
 
-        public Task<RegistrationResponse> RegisterAsync(RegistrationRequest request)
+        public async Task<RegistrationResponse> RegisterAsync(RegistrationRequest request)
         {
-
-            throw new NotImplementedException();
+            var existingUser = await _userManager.FindByNameAsync(request.UserName);
+            if (existingUser != null)
+            {
+                throw new Exception($"Username {request.UserName} already exists!");
+            }
+            
         }
     }
 }
