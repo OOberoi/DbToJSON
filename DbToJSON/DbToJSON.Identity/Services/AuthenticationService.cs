@@ -18,8 +18,8 @@ namespace DbToJSON.Identity.Services
 {
     public class AuthenticationService : IAuthenticationService
     {
-        private readonly UserManager<ApplicationUser>? _userManager;
-        private readonly SignInManager<ApplicationUser>? _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtSettings _jwtSettings;
 
         public AuthenticationService(UserManager<ApplicationUser> userManager,
@@ -32,7 +32,7 @@ namespace DbToJSON.Identity.Services
         }
         async Task<AuthenticationRequest> IAuthenticationService.AuthenticateAsync(AuthenticationRequest request)
         {
-            var user = await _userManager.FindByNameAsync(request.Email);
+            var user = await _userManager.FindByEmailAsync(request.Email);
             if (user == null)
             {
                 throw new Exception($"User with {request.Email} not found!!");
@@ -45,6 +45,16 @@ namespace DbToJSON.Identity.Services
             }
 
             JwtSecurityToken token = await GenerateToken(user);
+
+            AuthenticationResponse response = new()
+            {
+                Id = user.Id,
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                Email = user.Email,
+                UserName = user.UserName
+            };
+
+            return response;
         }
 
         private Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
