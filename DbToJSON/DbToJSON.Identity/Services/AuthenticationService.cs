@@ -38,7 +38,11 @@ namespace DbToJSON.Identity.Services
                 throw new Exception($"User with {request.Email} not found!!");
             }
 
-
+            var retVal = await _signInManager.PasswordSignInAsync(user.UserName, request.Password, false, lockoutOnFailure: false);
+            if (!retVal.Succeeded)
+            {
+                throw new Exception($"Credentials for {request.Email} are invalid!");
+            }
         }
 
         Task<RegistrationResponse> IAuthenticationService.RegisterAsync(RegistrationRequest request)
