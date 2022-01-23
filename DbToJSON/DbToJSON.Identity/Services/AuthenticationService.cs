@@ -67,7 +67,7 @@ namespace DbToJSON.Identity.Services
             throw new NotImplementedException();
         }
 
-        Task<RegistrationResponse> IAuthenticationService.RegisterAsync(RegistrationRequest request)
+        public Task<RegistrationResponse> RegisterAsync(RegistrationRequest request)
         {
             throw new NotImplementedException();
         }
