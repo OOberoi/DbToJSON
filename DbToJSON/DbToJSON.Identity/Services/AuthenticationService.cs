@@ -43,6 +43,13 @@ namespace DbToJSON.Identity.Services
             {
                 throw new Exception($"Credentials for {request.Email} are invalid!");
             }
+
+            JwtSecurityToken token = await GenerateToken(user);
+        }
+
+        private Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
+        {
+            throw new NotImplementedException();
         }
 
         Task<RegistrationResponse> IAuthenticationService.RegisterAsync(RegistrationRequest request)
