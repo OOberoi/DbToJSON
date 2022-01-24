@@ -13,6 +13,7 @@ using DbToJSON.Identity.Models;
 using Microsoft.Extensions;
 using DbToJSON.Application.Models.Authentication;
 using Microsoft.Extensions.Options;
+using System.Text.RegularExpressions;
 
 namespace DbToJSON.Identity.Services
 {
@@ -84,6 +85,17 @@ namespace DbToJSON.Identity.Services
                 EmailConfirmed = true
             };
             
+            var existingEmail = await _userManager.FindByEmailAsync(request.Email);
+
+            if (existingEmail == null)
+            { 
+                var retVal = await _userManager.CreateAsync(user, request.Password);
+                
+                if (retVal.Succeeded)
+                {
+                    return new RegistrationResponse() { UserId = user.Id };
+                }
+            }
         }
     }
 }
