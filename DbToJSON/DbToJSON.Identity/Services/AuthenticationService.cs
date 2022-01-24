@@ -88,13 +88,22 @@ namespace DbToJSON.Identity.Services
             var existingEmail = await _userManager.FindByEmailAsync(request.Email);
 
             if (existingEmail == null)
-            { 
+            {
                 var retVal = await _userManager.CreateAsync(user, request.Password);
-                
+
                 if (retVal.Succeeded)
                 {
                     return new RegistrationResponse() { UserId = user.Id };
                 }
+                else
+                {
+                    throw new Exception($"{retVal.Errors}");
+                }
+            }
+            else
+            {
+                throw new Exception($"Email {request.Email} exists!");
+            
             }
         }
     }
