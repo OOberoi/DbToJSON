@@ -63,8 +63,10 @@ namespace DbToJSON.Identity.Services
             throw new NotImplementedException();
         }
 
-        private Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
+        private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
         {
+            var userClaims = await _userManager.GetClaimsAsync(user);
+
             throw new NotImplementedException();
         }
 
