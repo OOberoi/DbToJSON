@@ -67,7 +67,8 @@ namespace DbToJSON.Identity.Services
         private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
         {
             var userClaims = await _userManager.GetClaimsAsync(user);
-            var roles = await _userManager.GetRolesAsync(user); 
+            var roles = await _userManager.GetRolesAsync(user);
+            var roleClaims = new List<Claim>();
 
 
 
