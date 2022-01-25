@@ -69,6 +69,10 @@ namespace DbToJSON.Identity.Services
             var userClaims = await _userManager.GetClaimsAsync(user);
             var roles = await _userManager.GetRolesAsync(user);
             var roleClaims = new List<Claim>();
+            foreach (var roleClaim in roles)
+            {
+                roleClaims.Add(new Claim("roles", roleClaim));
+            }
 
 
 
