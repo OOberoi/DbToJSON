@@ -14,6 +14,7 @@ using Microsoft.Extensions;
 using DbToJSON.Application.Models.Authentication;
 using Microsoft.Extensions.Options;
 using System.Text.RegularExpressions;
+using System.Security.Claims;
 
 namespace DbToJSON.Identity.Services
 {
@@ -67,6 +68,8 @@ namespace DbToJSON.Identity.Services
         {
             var userClaims = await _userManager.GetClaimsAsync(user);
             var roles = await _userManager.GetRolesAsync(user); 
+
+
 
             throw new NotImplementedException();
         }
