@@ -1,5 +1,4 @@
 ﻿using DbToJSON.Application.Contracts;
-using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
 namespace DbToJSON.Api.Services
