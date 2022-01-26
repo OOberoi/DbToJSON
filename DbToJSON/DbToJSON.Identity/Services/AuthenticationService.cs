@@ -87,7 +87,13 @@ namespace DbToJSON.Identity.Services
             var symetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
             var signingCredentials = new SigningCredentials(symetricSecurityKey, SecurityAlgorithms.HmacSha256);
 
-
+            var jwtSecurityToken = new JwtSecurityToken(
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes((double)_jwtSettings.DurationInMinutes),
+                signingCredentials: signingCredentials);
+            return jwtSecurityToken;
             
         }
 
