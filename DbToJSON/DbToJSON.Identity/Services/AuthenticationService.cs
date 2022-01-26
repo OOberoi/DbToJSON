@@ -84,8 +84,11 @@ namespace DbToJSON.Identity.Services
             .Union(userClaims)
             .Union(roleClaims);
 
+            var symetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
+            var signingCredentials = new SigningCredentials(symetricSecurityKey, SecurityAlgorithms.HmacSha256);
 
-            throw new NotImplementedException();
+
+            
         }
 
         public async Task<RegistrationResponse> RegisterAsync(RegistrationRequest request)
