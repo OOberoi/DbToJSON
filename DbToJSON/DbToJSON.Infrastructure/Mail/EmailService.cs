@@ -14,12 +14,12 @@ namespace DbToJSON.Infrastructure.Mail
     public class EmailService : IEmailService
     {
         public EmailSettings _emailSettings { get; }
-        public ILogger<EmailService> logger { get; }
+        public ILogger<EmailService> _logger { get; }
 
         public EmailService(EmailSettings emailSettings, ILogger<EmailService> _logger)
         {
             _emailSettings = emailSettings;
-            logger = _logger;   
+            _logger = _logger;   
         }
         public async Task<bool> IEmailService.SendEmailAsync(Email email)
         {
@@ -36,8 +36,8 @@ namespace DbToJSON.Infrastructure.Mail
 
             var Message = MailHelper.CreateSingleEmail(from, to, subject, body, body);
             var response = await client.SendEmailAsync(Message);
-           
 
+            _logger.LogInformation("Email was sent successfully!");
             throw new NotImplementedException();
         }
     }
