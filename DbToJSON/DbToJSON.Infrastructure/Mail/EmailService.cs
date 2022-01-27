@@ -20,8 +20,9 @@ namespace DbToJSON.Infrastructure.Mail
             _emailSettings = emailSettings;
             logger = _logger;   
         }
-        Task<bool> IEmailService.SendEmailAsync(Email email)
+        public Task<bool> IEmailService.SendEmailAsync(Email email)
         {
+
             throw new NotImplementedException();
         }
     }
