@@ -27,11 +27,15 @@ namespace DbToJSON.Infrastructure.Mail
             var subject = email.Subject;
             var to = new EmailAddress(email.To);
             var body = email.Body;
+            
             var from = new EmailAddress
             {
                 Email = _emailSettings.FromAddress,
                 Name = _emailSettings.FromName
             };
+
+            var sgMessage = MailHelper.CreateSingleEmail(from, to, subject, body, body);
+
            
 
             throw new NotImplementedException();
