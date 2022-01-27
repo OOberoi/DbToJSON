@@ -26,8 +26,4 @@
     <ProjectReference Include="..\DbToJSON.Application\DbToJSON.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="FileExport\" />
-  </ItemGroup>
-
 </Project>
