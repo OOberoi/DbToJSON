@@ -7,7 +7,6 @@ using SendGrid;
 using DbToJSON.Application.Contracts.Infrastructure;
 using DbToJSON.Application.Models.Mail;
 using Microsoft.Extensions.Logging;
-using SendGrid;
 
 namespace DbToJSON.Infrastructure.Mail
 {
@@ -24,6 +23,7 @@ namespace DbToJSON.Infrastructure.Mail
         public Task<bool> IEmailService.SendEmailAsync(Email email)
         {
             var client = new SendGridClient(_emailSettings.ApiKey);
+            var subject = email.Subject;
 
             throw new NotImplementedException();
         }
