@@ -21,7 +21,7 @@ namespace DbToJSON.Infrastructure.Mail
             _emailSettings = emailSettings;
             logger = _logger;   
         }
-        public Task<bool> IEmailService.SendEmailAsync(Email email)
+        public async Task<bool> IEmailService.SendEmailAsync(Email email)
         {
             var client = new SendGridClient(_emailSettings.ApiKey);
             var subject = email.Subject;
@@ -34,8 +34,8 @@ namespace DbToJSON.Infrastructure.Mail
                 Name = _emailSettings.FromName
             };
 
-            var sgMessage = MailHelper.CreateSingleEmail(from, to, subject, body, body);
-
+            var Message = MailHelper.CreateSingleEmail(from, to, subject, body, body);
+            var response = await client.SendEmailAsync(Message);
            
 
             throw new NotImplementedException();
