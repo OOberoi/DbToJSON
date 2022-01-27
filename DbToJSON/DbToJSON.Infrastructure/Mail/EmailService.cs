@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,15 @@ namespace DbToJSON.Infrastructure.Mail
             var response = await client.SendEmailAsync(Message);
 
             _logger.LogInformation("Email was sent successfully!");
+
+            if (response.StatusCode == HttpStatusCode.Accepted) // || (response.StatusCode = HttpStatusCode.OK))
+            {
+                return true;
+            }
+            else
+            { 
+                
+            }
             throw new NotImplementedException();
         }
     }
