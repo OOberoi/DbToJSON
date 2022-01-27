@@ -12,6 +12,9 @@ namespace DbToJSON.Infrastructure.Mail
 {
     public class EmailService : IEmailService
     {
+        public EmailSettings _emailSettings { get; }
+        public ILogger<EmailService> logger { get; }
+
         Task<bool> IEmailService.SendEmailAsync(Email email)
         {
             throw new NotImplementedException();
