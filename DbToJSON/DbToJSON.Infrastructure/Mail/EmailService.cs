@@ -17,12 +17,12 @@ namespace DbToJSON.Infrastructure.Mail
         public EmailSettings _emailSettings { get; }
         public ILogger<EmailService> _logger { get; }
 
-        public EmailService(EmailSettings emailSettings, ILogger<EmailService> _logger)
+        public EmailService(EmailSettings emailSettings, ILogger<EmailService> logger)
         {
             _emailSettings = emailSettings;
-            _logger = _logger;   
+            _logger = logger;   
         }
-        public async Task<bool> IEmailService.SendEmailAsync(Email email)
+        public async Task<bool> SendEmailAsync(Email email)
         {
             var client = new SendGridClient(_emailSettings.ApiKey);
             var subject = email.Subject;
@@ -40,15 +40,16 @@ namespace DbToJSON.Infrastructure.Mail
 
             _logger.LogInformation("Email was sent successfully!");
 
-            if (response.StatusCode == HttpStatusCode.Accepted) // || (response.StatusCode = HttpStatusCode.OK))
+            if (response.StatusCode == HttpStatusCode.Accepted) // || response.StatusCode = HttpStatusCode.OK)
             {
                 return true;
             }
             else
-            { 
-                
+            {
+                _logger.LogInformation("Email failed!");
+                return false;
             }
-            throw new NotImplementedException();
+            
         }
     }
 }
