@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Contracts\Persistence\" />
     <Folder Include="FeatureSet\Categories\" />
+    <Folder Include="FeatureSet\Events\" />
     <Folder Include="Mappings\" />
     <Folder Include="Profiles\" />
   </ItemGroup>
