@@ -8,5 +8,7 @@ namespace DbToJSON.Application.Contracts.Infrastructure
 {
     public interface ICsvExport
     {
+        //todo: to pass a List<EventExportDto>
+        byte[] ExportEventsToCsv(string path);
     }
 }
