@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Contracts\Persistence\" />
-    <Folder Include="FeatureSet\" />
+    <Folder Include="FeatureSet\Categories\" />
     <Folder Include="Mappings\" />
     <Folder Include="Profiles\" />
   </ItemGroup>
