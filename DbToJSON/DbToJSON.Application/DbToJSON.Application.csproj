@@ -9,7 +9,8 @@
   <ItemGroup>
     <Folder Include="Contracts\Persistence\" />
     <Folder Include="FeatureSet\Categories\Commands\CreateCategory\" />
-    <Folder Include="FeatureSet\Categories\Queries\" />
+    <Folder Include="FeatureSet\Categories\Queries\GetCategoriesList\" />
+    <Folder Include="FeatureSet\Categories\Queries\GetCategoriesListWithEvents\" />
     <Folder Include="FeatureSet\Events\" />
     <Folder Include="FeatureSet\Orders\" />
     <Folder Include="Mappings\" />
