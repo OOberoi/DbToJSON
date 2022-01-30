@@ -10,7 +10,8 @@
     <Folder Include="Contracts\Persistence\" />
     <Folder Include="FeatureSet\Categories\Commands\CreateCategory\" />
     <Folder Include="FeatureSet\Categories\Queries\GetCategoriesListWithEvents\" />
-    <Folder Include="FeatureSet\Events\" />
+    <Folder Include="FeatureSet\Events\Commands\" />
+    <Folder Include="FeatureSet\Events\Queries\" />
     <Folder Include="FeatureSet\Orders\" />
     <Folder Include="Mappings\" />
     <Folder Include="Profiles\" />
