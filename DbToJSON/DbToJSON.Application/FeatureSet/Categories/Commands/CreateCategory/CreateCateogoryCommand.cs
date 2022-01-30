@@ -9,5 +9,6 @@ namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
 {
     internal class CreateCateogoryCommand : IRequest<CreateCateogoryCommandResponse>
     {
+        public string? Name { get; set; }
     }
 }
