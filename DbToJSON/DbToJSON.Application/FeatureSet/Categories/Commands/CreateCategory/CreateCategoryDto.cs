@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
 {
-    internal class CreateCategoryDto
+    public class CreateCategoryDto
     {
+        public Guid CategoryId { get; set; }
+        public string? Name { get; set; }
     }
 }
