@@ -7,7 +7,7 @@ using MediatR;
 
 namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
 {
-    internal class CreateCateogoryCommand
+    internal class CreateCateogoryCommand : IRequest<CreateCateogoryCommandResponse>
     {
     }
 }
