@@ -7,11 +7,12 @@ using FluentValidation;
 
 namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryCommandValidator : AbstractValidator<CreateCateogoryCommand>
+    internal class CreateCategoryCommandValidator : AbstractValidator<CreateCateogoryCommand>
     {
-        public CreateCategoryCommandValidator()
-        {
-
-        }
+        public CreateCategoryCommandValidator() =>
+                RuleFor(c => c.Name)
+                .NotEmpty().WithMessage("{PropertyName} is needed!")
+                .NotNull()
+                .MaximumLength(25).WithMessage("{PropertyName} must not exceed 12 characters!");
     }
 }
