@@ -9,6 +9,9 @@ namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
 {
     public class CreateCategoryCommandValidator : AbstractValidator<CreateCateogoryCommand>
     {
+        public CreateCategoryCommandValidator()
+        {
 
+        }
     }
 }
