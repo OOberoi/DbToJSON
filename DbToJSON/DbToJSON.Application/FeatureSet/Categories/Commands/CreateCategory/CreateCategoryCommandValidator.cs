@@ -7,7 +7,8 @@ using FluentValidation;
 
 namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryCommandValidator
+    public class CreateCategoryCommandValidator : AbstractValidator<CreateCateogoryCommand>
     {
+
     }
 }
