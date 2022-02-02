@@ -1,8 +1,9 @@
-﻿using DbToJSON.Application;
+﻿using DbToJSON.Application.Responses;
 
 namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
 {
-    internal class CreateCateogoryCommandResponse
+    internal class CreateCateogoryCommandResponse : BaseResponse
     {
+
     }
 }
