@@ -1,4 +1,6 @@
-﻿namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
+﻿using DbToJSON.Application;
+
+namespace DbToJSON.Application.FeatureSet.Categories.Commands.CreateCategory
 {
     internal class CreateCateogoryCommandResponse
     {
