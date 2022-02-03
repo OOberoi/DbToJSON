@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Application.Contracts.Persistence
 {
-    internal interface IAsyncRepository
+    internal interface IAsyncRepository<T> where T : class
     {
+        Task<T> GetByIdAsync(Guid id);
     }
 }
