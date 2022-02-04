@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.Application.Contracts.Persistence
 {
-    internal interface ICategoryRepository
+    internal interface ICategoryRepository : IAsyncRepository<Category>
     {
     }
 }

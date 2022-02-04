@@ -33,7 +33,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{CE9AC8AB-D86
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbToJSON.Api", "DbToJSON.Api\DbToJSON.Api.csproj", "{A57F0D3A-38D5-49BB-BBCD-26D9D397D4F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbToJSON.Identity", "DbToJSON.Identity\DbToJSON.Identity.csproj", "{87385E1C-5513-498B-87D6-3F485CF3E562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbToJSON.Identity", "DbToJSON.Identity\DbToJSON.Identity.csproj", "{87385E1C-5513-498B-87D6-3F485CF3E562}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessDomain", "BusinessDomain\BusinessDomain.csproj", "{83876525-AF86-4FDF-8D00-AFAD8161ED7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{87385E1C-5513-498B-87D6-3F485CF3E562}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87385E1C-5513-498B-87D6-3F485CF3E562}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87385E1C-5513-498B-87D6-3F485CF3E562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83876525-AF86-4FDF-8D00-AFAD8161ED7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83876525-AF86-4FDF-8D00-AFAD8161ED7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83876525-AF86-4FDF-8D00-AFAD8161ED7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83876525-AF86-4FDF-8D00-AFAD8161ED7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
