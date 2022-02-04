@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\Persistence\" />
     <Folder Include="FeatureSet\Categories\Queries\GetCategoriesListWithEvents\" />
     <Folder Include="FeatureSet\Events\Commands\" />
     <Folder Include="FeatureSet\Events\Queries\" />
