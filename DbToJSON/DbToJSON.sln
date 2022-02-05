@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbToJSON.Api", "DbToJSON.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbToJSON.Identity", "DbToJSON.Identity\DbToJSON.Identity.csproj", "{87385E1C-5513-498B-87D6-3F485CF3E562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessDomain", "BusinessDomain\BusinessDomain.csproj", "{83876525-AF86-4FDF-8D00-AFAD8161ED7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbToJSON.BusinessDomain", "BusinessDomain\DbToJSON.BusinessDomain.csproj", "{83876525-AF86-4FDF-8D00-AFAD8161ED7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

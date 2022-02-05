@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessDomain.Entities
 {
-    internal class Category
+    public class Category
     {
     }
 }
