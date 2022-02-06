@@ -8,5 +8,6 @@ namespace DbToJSON.BusinessDomain.Entities
 {
     internal class Event
     {
+        public Guid EventId { get; set; }
     }
 }
