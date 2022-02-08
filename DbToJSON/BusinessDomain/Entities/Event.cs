@@ -16,5 +16,6 @@ namespace DbToJSON.BusinessDomain.Entities
         public string? Description { get; set; }
         public string Url { get; set; }
         public Guid CategoryId { get; set; }
+        public Category? Category { get; set; }
     }
 }
