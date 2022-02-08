@@ -13,6 +13,8 @@ namespace DbToJSON.BusinessDomain.Entities
         public double? Price  { get; set; }
         public string? Artist { get; set; }
         public DateTime Date { get; set; }
+        public string? Description { get; set; }
+
 
     }
 }
