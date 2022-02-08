@@ -15,6 +15,6 @@ namespace DbToJSON.BusinessDomain.Entities
         public DateTime Date { get; set; }
         public string? Description { get; set; }
         public string Url { get; set; }
-
+        public Guid CategoryId { get; set; }
     }
 }
