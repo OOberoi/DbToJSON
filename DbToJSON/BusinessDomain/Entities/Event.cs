@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DbToJSON.BusinessDomain.Entities
 {
-    internal class Event
+    public class Event
     {
         public Guid? EventId { get; set; }
         public string? EventName { get; set; }
