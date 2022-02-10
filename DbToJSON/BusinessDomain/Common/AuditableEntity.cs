@@ -8,5 +8,7 @@ namespace DbToJSON.BusinessDomain.Common
 {
     public class AuditableEntity
     {
+        public string? CreatedBy { get; set; }
+
     }
 }
