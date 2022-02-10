@@ -7,7 +7,7 @@ using DbToJSON.BusinessDomain.Common;
 
 namespace DbToJSON.BusinessDomain.Entities
 {
-    public class Event
+    public class Event : AuditableEntity
     {
         public Guid? EventId { get; set; }
         public string? EventName { get; set; }
