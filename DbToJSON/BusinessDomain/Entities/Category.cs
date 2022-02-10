@@ -7,11 +7,10 @@ using DbToJSON.BusinessDomain.Common;
 
 namespace DbToJSON.BusinessDomain.Entities
 {
-    public class Category 
+    public class Category : AuditableEntity
     {
         public Guid CategoryId { get; set; }
         public string? Name { get; set; }    
         public ICollection<Event>? Events { get; set; }
-        //todo: to resolve the above accessiblity issue
     }
 }
