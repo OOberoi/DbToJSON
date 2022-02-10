@@ -7,7 +7,7 @@ using DbToJSON.BusinessDomain.Common;
 
 namespace DbToJSON.BusinessDomain.Entities
 {
-    internal class Order
+    internal class Order : AuditableEntity
     {
     }
 }
