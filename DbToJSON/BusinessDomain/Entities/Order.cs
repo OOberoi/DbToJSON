@@ -9,5 +9,8 @@ namespace DbToJSON.BusinessDomain.Entities
 {
     internal class Order : AuditableEntity
     {
+        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
+
     }
 }
