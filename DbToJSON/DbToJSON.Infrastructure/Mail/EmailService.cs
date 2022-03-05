@@ -40,7 +40,7 @@ namespace DbToJSON.Infrastructure.Mail
 
             _logger.LogInformation("Email was sent successfully!");
 
-            if (response.StatusCode == HttpStatusCode.Accepted) // || response.StatusCode = HttpStatusCode.OK)
+            if (response.StatusCode == HttpStatusCode.Accepted || response.StatusCode == HttpStatusCode.OK)
             {
                 return true;
             }
