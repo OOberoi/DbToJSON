@@ -44,12 +44,8 @@ namespace DbToJSON.Infrastructure.Mail
             {
                 return true;
             }
-            else
-            {
-                _logger.LogInformation("Email failed!");
-                return false;
-            }
-            
+            _logger.LogInformation("Email failed!");
+            return false;
         }
     }
 }
