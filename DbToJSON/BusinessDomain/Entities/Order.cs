@@ -11,7 +11,7 @@ namespace DbToJSON.BusinessDomain.Entities
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
-        public decimal OrderTotal { get; set; }
+        public decimal? OrderTotal { get; set; }
         public DateTime? DateOrderPlaced { get; set; }
         public bool? OrderPaid { get; set; }
     }
