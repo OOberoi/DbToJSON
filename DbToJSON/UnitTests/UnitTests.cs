@@ -147,7 +147,7 @@ namespace UnitTests
                 using var ctx = new JsonDbContext();
                 var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 3);
                 cli.Comments = "regression testing";
-                cli.JSON = "Json update";
+                cli.JSON = "Phase1 update";
                 cli.DateUpdated = DateTime.Now;
                 ctx.SaveChanges();
                 Assert.IsTrue(true);
