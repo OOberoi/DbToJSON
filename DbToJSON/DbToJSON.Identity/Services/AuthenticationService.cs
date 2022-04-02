@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using DbToJSON.Application.Contracts.Identity;
+﻿using DbToJSON.Application.Contracts.Identity;
 using DbToJSON.Application.Models;
-using DbToJSON.Identity.Models;
-using Microsoft.Extensions;
 using DbToJSON.Application.Models.Authentication;
+using DbToJSON.Identity.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
-using System.Text.RegularExpressions;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
 
 namespace DbToJSON.Identity.Services
 {
