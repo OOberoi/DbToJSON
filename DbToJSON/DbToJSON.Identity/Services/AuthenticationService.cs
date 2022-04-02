@@ -94,7 +94,6 @@ namespace DbToJSON.Identity.Services
                 expires: DateTime.UtcNow.AddMinutes((double)_jwtSettings.DurationInMinutes),
                 signingCredentials: signingCredentials);
             return jwtSecurityToken;
-            
         }
 
         public async Task<RegistrationResponse> RegisterAsync(RegistrationRequest request)
