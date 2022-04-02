@@ -24,28 +24,37 @@ namespace DbToJSON.Infrastructure.Mail
         }
         public async Task<bool> SendEmailAsync(Email email)
         {
-            var client = new SendGridClient(_emailSettings.ApiKey);
-            var subject = email.Subject;
-            var to = new EmailAddress(email.To);
-            var body = email.Body;
-            
-            var from = new EmailAddress
+            try
             {
-                Email = _emailSettings.FromAddress,
-                Name = _emailSettings.FromName
-            };
+                var client = new SendGridClient(_emailSettings.ApiKey);
+                var subject = email.Subject;
+                var to = new EmailAddress(email.To);
+                var body = email.Body;
 
-            var Message = MailHelper.CreateSingleEmail(from, to, subject, body, body);
-            var response = await client.SendEmailAsync(Message);
+                var from = new EmailAddress
+                {
+                    Email = _emailSettings.FromAddress,
+                    Name = _emailSettings.FromName
+                };
 
-            _logger.LogInformation("Email was sent successfully!");
+                var Message = MailHelper.CreateSingleEmail(from, to, subject, body, body);
+                var response = await client.SendEmailAsync(Message);
 
-            if (response.StatusCode == HttpStatusCode.Accepted || response.StatusCode == HttpStatusCode.OK)
-            {
-                return true;
+                _logger.LogInformation("Email was sent successfully!");
+
+                if (response.StatusCode == HttpStatusCode.Accepted || response.StatusCode == HttpStatusCode.OK)
+                {
+                    return true;
+                }
+                _logger.LogInformation("Email failed!");
+                return false;
             }
-            _logger.LogInformation("Email failed!");
-            return false;
+            catch (Exception ex)
+            {
+                _logger.LogInformation("Mail cound not be sent!");
+                return false;
+            }
+
         }
     }
 }
