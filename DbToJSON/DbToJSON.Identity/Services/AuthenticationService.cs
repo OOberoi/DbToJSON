@@ -132,7 +132,6 @@ namespace DbToJSON.Identity.Services
             else
             {
                 throw new Exception($"Email {request.Email} exists!");
-            
             }
         }
     }
