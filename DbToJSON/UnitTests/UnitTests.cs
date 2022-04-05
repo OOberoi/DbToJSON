@@ -49,7 +49,8 @@ namespace UnitTests
 
         [TestMethod]
         public void FailTest()
-        { 
+        {
+            Assert.Fail();
         
         }
 
