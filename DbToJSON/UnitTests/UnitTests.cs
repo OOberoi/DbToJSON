@@ -47,6 +47,7 @@ namespace UnitTests
             Assert.IsTrue(val > 5);
         }
 
+        [TestMethod]
         public void FailTest()
         { 
         
