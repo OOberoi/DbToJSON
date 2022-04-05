@@ -50,7 +50,8 @@ namespace UnitTests
         [TestMethod]
         public void FailTest()
         {
-            Assert.Fail();
+            int val = 25;
+            Assert.AreEqual(val, 20);
         
         }
 
