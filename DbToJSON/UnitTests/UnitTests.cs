@@ -47,6 +47,11 @@ namespace UnitTests
             Assert.IsTrue(val > 5);
         }
 
+        public void FailTest()
+        { 
+        
+        }
+
         [TestMethod]
         public void GetArrayList()
         {
