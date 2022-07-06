@@ -48,6 +48,14 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void FailTest()
+        {
+            int val = 25;
+            Assert.AreEqual(val, 20);
+        
+        }
+
+        [TestMethod]
         public void GetArrayList()
         {
             try
@@ -147,7 +155,7 @@ namespace UnitTests
                 using var ctx = new JsonDbContext();
                 var cli = ctx.ClientRepaperingInfo.First(c => c.ID == 3);
                 cli.Comments = "regression testing";
-                cli.JSON = "Json update";
+                cli.JSON = "Phase1 update";
                 cli.DateUpdated = DateTime.Now;
                 ctx.SaveChanges();
                 Assert.IsTrue(true);
@@ -215,7 +223,7 @@ namespace UnitTests
         {
             try
             {
-                string txt = "â, î or ô?><ä ë ü Ö Ü ã õ ñ Ã Õ Ñ";
+                string txt = "â, î o r ô?><ä ë ü Ö Ü ã õ ñ Ã Õ Ñ";
                 var normalizedString = txt.Normalize(NormalizationForm.FormD);
                 StringBuilder sb = new();
 

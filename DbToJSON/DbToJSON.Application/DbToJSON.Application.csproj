@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="FeatureSet\Categories\Queries\GetCategoriesListWithEvents\" />
+    <Folder Include="FeatureSet\Events\Commands\" />
+    <Folder Include="FeatureSet\Events\Queries\" />
+    <Folder Include="FeatureSet\Orders\MonthlyOrders\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Profiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.6" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessDomain\DbToJSON.BusinessDomain.csproj" />
+  </ItemGroup>
+
+</Project>
